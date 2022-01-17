@@ -88,7 +88,7 @@ namespace MiddleProject
             // 
             // contentPanel
             // 
-            this.contentPanel.Location = new System.Drawing.Point(0, 35);
+            this.contentPanel.Location = new System.Drawing.Point(0, 34);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(200, 100);
             this.contentPanel.TabIndex = 1;
