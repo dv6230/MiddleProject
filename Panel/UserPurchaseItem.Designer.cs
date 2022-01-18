@@ -1,5 +1,5 @@
 ﻿
-namespace winformTest
+namespace MiddleProject.Panel
 {
     partial class UserPurchaseItem
     {

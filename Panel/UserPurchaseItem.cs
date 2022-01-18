@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace winformTest
+namespace MiddleProject.Panel
 {
     public partial class UserPurchaseItem : UserControl
     {
