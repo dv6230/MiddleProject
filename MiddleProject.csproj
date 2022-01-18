@@ -82,6 +82,8 @@
     <Compile Include="ManagePage.Designer.cs">
       <DependentUpon>ManagePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\GolbalVar.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Panel\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
