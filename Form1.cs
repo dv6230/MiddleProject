@@ -21,5 +21,11 @@ namespace MiddleProject
         {
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT * from account WHERE id = @id ";
+            
+        }
     }
 }

@@ -13,13 +13,20 @@ namespace MiddleProject
 
         private void ManagePage_Load(object sender, EventArgs e)
         {
-            contentPanel.Size = new Size(this.Width, this.Height - menuStrip1.Height);
-            contentPanel.BackColor = Color.Red;
+            
         }
 
         private void ManagePage_SizeChanged(object sender, EventArgs e)
         {
-            contentPanel.Size = new Size(this.Width, this.Height - menuStrip1.Height);
+            
+        }
+
+        private void 訂單查詢ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p =  new Panel.UserControl1();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MiddleProject
@@ -16,7 +13,10 @@ namespace MiddleProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagePage());
+            //Application.Run(new ManagePage());
+            DBConnection d = new DBConnection();
+            d.ProduceConnectStr();
+            Application.Run(new Form1());
         }
     }
 }
