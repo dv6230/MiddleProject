@@ -90,6 +90,10 @@
     <Compile Include="Panel\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\UserPurchaseItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\UserPurchaseItem.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Login.resx">
@@ -104,6 +108,7 @@
     <EmbeddedResource Include="Panel\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel\UserPurchaseItem.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
