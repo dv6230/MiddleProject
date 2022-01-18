@@ -21,5 +21,10 @@ namespace MiddleProject.Panel
         {
 
         }
+
+        private void btnDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

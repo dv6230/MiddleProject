@@ -7,7 +7,7 @@ namespace MiddleProject
     public partial class FrontOperate : Form
     {
 
-        float panel3Width = 0.7f;
+        float panel3Width = 0.6f;
 
         public FrontOperate()
         {
@@ -36,6 +36,13 @@ namespace MiddleProject
             panel3.Size = new Size((int)((this.Width - panel1.Width) * panel3Width), this.Height);
             panel4.Size = new Size((int)(this.Width - panel1.Width - panel3.Width), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
+
+            userPurchaseItem1.lblNote.Text = "lorem*10 lsafj o jsaodfj fp jw oj727 5373 7838 w jfow jwjofij woj op jw 246489 65 4";
+            userPurchaseItem1.lblNote.Height = userPurchaseItem1.lblNote.PreferredHeight;
+            userPurchaseItem1.Height = userPurchaseItem1.PreferredSize.Height + 10;
+            //userPurchaseItem1.Width = panel4.Width - 75;
+
+
         }
       
         private void FrontOperate_SizeChanged(object sender, EventArgs e)
