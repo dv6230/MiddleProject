@@ -10,7 +10,7 @@ namespace MiddleProject
         {
             SqlConnectionStringBuilder scrb = new SqlConnectionStringBuilder();
             scrb.DataSource = @".";
-            scrb.InitialCatalog = "mydb";
+            scrb.InitialCatalog = "MidProject";
             scrb.IntegratedSecurity = true;
             DBstr = scrb.ToString();
         }

@@ -16,7 +16,7 @@ namespace MiddleProject
             //Application.Run(new ManagePage());
             DBConnection d = new DBConnection();
             d.ProduceConnectStr();
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }

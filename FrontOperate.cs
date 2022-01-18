@@ -10,21 +10,15 @@ using System.Windows.Forms;
 
 namespace MiddleProject
 {
-    public partial class Form1 : Form
+    public partial class FrontOperate : Form
     {
-        public Form1()
+        public FrontOperate()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrontOperate_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT * from account WHERE id = @id ";
             
         }
     }
