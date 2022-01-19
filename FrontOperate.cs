@@ -36,13 +36,16 @@ namespace MiddleProject
             panel3.Size = new Size((int)((this.Width - panel1.Width) * panel3Width), this.Height);
             panel4.Size = new Size((int)(this.Width - panel1.Width - panel3.Width), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
+
+
         }
-      
+
         private void FrontOperate_SizeChanged(object sender, EventArgs e)
         {
-            panel3.Size = new Size((int)((this.Width-panel1.Width)* panel3Width), this.Height);
+            panel3.Size = new Size((int)((this.Width - panel1.Width) * panel3Width), this.Height);
             panel4.Size = new Size((int)(this.Width - panel1.Width - panel3.Width), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
         }
+
     }
 }

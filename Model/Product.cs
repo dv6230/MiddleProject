@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace winformTest.Model
+namespace MiddleProject.Model
 {
     class Product
     {
@@ -13,6 +13,7 @@ namespace winformTest.Model
         private List<string> userSelectIngredient;
         private string sweet;
         private string temperature;
+
         //public string[] sweetLevelAry = { "無糖", "三分", "五分", "七分", "全糖" };
         //public string[] temperatureAry = { "正常", "少冰", "微冰", "去冰", "熱" };
 

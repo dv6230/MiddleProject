@@ -30,13 +30,13 @@ namespace MiddleProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tBoxAccount = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tBoxPassword = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,14 +53,6 @@ namespace MiddleProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(790, 473);
             this.panel1.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 473);
-            this.panel2.TabIndex = 7;
             // 
             // label1
             // 
@@ -100,6 +92,7 @@ namespace MiddleProject
             this.button1.TabIndex = 15;
             this.button1.Text = "登入";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -120,6 +113,14 @@ namespace MiddleProject
             this.tBoxPassword.PasswordChar = '*';
             this.tBoxPassword.Size = new System.Drawing.Size(218, 31);
             this.tBoxPassword.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 473);
+            this.panel2.TabIndex = 7;
             // 
             // Login
             // 

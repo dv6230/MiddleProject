@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace winformTest.Model
+namespace MiddleProject.Model
 {
     class GolbalVar
     {
+        static public int auth = 100;
+
+
         static public List<Product> products = new List<Product>();
         static public List<Product> purchaseList = new List<Product>();
         static public List<string> ingredientList = new List<string>();

@@ -46,13 +46,26 @@ namespace MiddleProject
             {
                 if (reader["password"].Equals(tBoxPassword.Text))
                 {
-
                     this.Hide();
+                    getAllProduct();
                     var form2 = new FrontOperate();
                     form2.Closed += (s, args) => this.Close();
                     form2.Show();
-
                 }
+            }
+        }
+
+        void getAllProduct()
+        {
+            string sql = "SELECT * from products";
+            SqlConnection con = new SqlConnection(DBConnection.DBstr);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Model.Product p = new Model.Product();
+                Model.GolbalVar.products.Add(p);
             }
         }
 

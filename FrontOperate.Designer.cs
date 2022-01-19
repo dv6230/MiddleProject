@@ -32,12 +32,14 @@ namespace MiddleProject
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddItem = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -46,6 +48,7 @@ namespace MiddleProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -72,6 +75,16 @@ namespace MiddleProject
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(505, 558);
             this.panel3.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(384, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "重置";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -100,7 +113,7 @@ namespace MiddleProject
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(516, 169);
+            this.tabPage2.Size = new System.Drawing.Size(497, 276);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -110,7 +123,7 @@ namespace MiddleProject
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(510, 163);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(491, 270);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnAddItem
@@ -123,15 +136,14 @@ namespace MiddleProject
             this.btnAddItem.Text = "加入";
             this.btnAddItem.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button2
             // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(384, 451);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "重置";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(34, 96);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 93);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FrontOperate
             // 
@@ -146,6 +158,7 @@ namespace MiddleProject
             this.Text = "點餐";
             this.Load += new System.EventHandler(this.FrontOperate_Load);
             this.SizeChanged += new System.EventHandler(this.FrontOperate_SizeChanged);
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -164,5 +177,6 @@ namespace MiddleProject
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddItem;
+        private System.Windows.Forms.Button button2;
     }
 }
