@@ -36,7 +36,6 @@ namespace MiddleProject
             this.庫存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.會員ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -95,23 +94,13 @@ namespace MiddleProject
             // 
             this.contentPanel.BackColor = System.Drawing.Color.Transparent;
             this.contentPanel.Controls.Add(this.button3);
-            this.contentPanel.Controls.Add(this.button2);
-            this.contentPanel.Controls.Add(this.button1);
+            this.contentPanel.Controls.Add(this.button2);           
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(0, 27);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(790, 446);
             this.contentPanel.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(147, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -163,6 +152,5 @@ namespace MiddleProject
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
     }
 }
