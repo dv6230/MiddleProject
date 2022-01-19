@@ -67,5 +67,13 @@ namespace MiddleProject
                 this.Close();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // this.Hide();
+            var manage = new ManagePage();
+            manage.Closed += (s, args) => this.Close();
+            manage.Show();
+        }
     }
 }
