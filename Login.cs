@@ -25,6 +25,7 @@ namespace MiddleProject
         {
             if (e.KeyCode == Keys.Enter)
             {
+                Console.WriteLine("hello");
                 loginCheck();
             }
         }
@@ -56,20 +57,6 @@ namespace MiddleProject
                 }
             }
         }
-
-        void getAllProduct()
-        {
-            string sql = "SELECT * from products";
-            SqlConnection con = new SqlConnection(DBConnection.DBstr);
-            con.Open();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            var reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                Model.Product p = new Model.Product();
-                Model.GolbalVar.products.Add(p);
-            }
-        }
-
+      
     }
 }

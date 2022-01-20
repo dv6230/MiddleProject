@@ -113,6 +113,7 @@ namespace MiddleProject
             this.tBoxPassword.PasswordChar = '*';
             this.tBoxPassword.Size = new System.Drawing.Size(218, 31);
             this.tBoxPassword.TabIndex = 14;
+            this.tBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxPassword_KeyDown);
             // 
             // panel2
             // 
