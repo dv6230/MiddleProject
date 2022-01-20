@@ -13,7 +13,7 @@ namespace MiddleProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,6 +31,7 @@ namespace MiddleProject
 
         void loginCheck()
         {
+
             string sql = "SELECT * from accounts WHERE account = @acnt ";
             SqlConnection con = new SqlConnection(DBConnection.DBstr);
             con.Open();
@@ -47,7 +48,8 @@ namespace MiddleProject
                 if (reader["password"].Equals(tBoxPassword.Text))
                 {
                     this.Hide();
-                    getAllProduct();
+                    Model.GolbalVar.userId = (int)reader["id"];
+                    new Initialization(); // 初始化
                     var form2 = new FrontOperate();
                     form2.Closed += (s, args) => this.Close();
                     form2.Show();

@@ -4,7 +4,7 @@ namespace MiddleProject.Model
 {
     class Product
     {
-
+        private string foodType;
         private string name;
         private int price;
         private int count;
@@ -24,6 +24,7 @@ namespace MiddleProject.Model
         public List<string> UserSelectIngredient { get => userSelectIngredient; set => userSelectIngredient = value; }
         public string Sweet { get => sweet; set => sweet = value; }
         public string Temperature { get => temperature; set => temperature = value; }
+        public string FoodType { get => foodType; set => foodType = value; }
 
         public Product(string name, int price)
         {

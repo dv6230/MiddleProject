@@ -4,15 +4,19 @@ namespace MiddleProject.Model
 {
     class GolbalVar
     {
-        static public int auth = 100;
-
+        static public int auth = 0;
+        static public int userId = 0;
 
         static public List<Product> products = new List<Product>();
         static public List<Product> purchaseList = new List<Product>();
         static public List<string> ingredientList = new List<string>();
+        static public List<string> userPermissionList = new List<string>();
+
+        static public Dictionary<string, List<Product>> productList = new Dictionary<string, List<Product>>();
 
         static public string[] sweetLevel = { "無糖", "三分", "五分", "七分", "全糖" };
         static public string[] temperature = { "正常", "少冰", "微冰", "去冰", "常溫" };
+
 
     }
 

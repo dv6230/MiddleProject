@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Initialization.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
