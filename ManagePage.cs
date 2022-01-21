@@ -13,11 +13,9 @@ namespace MiddleProject
         private void ManagePage_Load(object sender, EventArgs e)
         {
             var a = menuStrip1.Items;
-            Console.WriteLine(a);
             foreach (var item in a)
             {
                 var t = (ToolStripMenuItem)item;
-                Console.WriteLine(t.Text);
                 if (t.Text.Equals("庫存"))
                 {
                     t.Visible = false; 

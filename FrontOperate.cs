@@ -8,7 +8,7 @@ namespace MiddleProject
     public partial class FrontOperate : Form
     {
 
-        float panel3Width = 0.55f;
+        int padwidth = 22;
 
         public FrontOperate()
         {
@@ -30,12 +30,12 @@ namespace MiddleProject
                 tpg.Size = new System.Drawing.Size(192, 71);
                 tpg.TabIndex = 0;
                 tpg.Text = item.Key;
-                tpg.UseVisualStyleBackColor = true;                
+                tpg.UseVisualStyleBackColor = true;
                 tpg.SizeChanged += Tpg_SizeChanged;
                 tabControl1.Controls.Add(tpg);
 
                 FlowLayoutPanel f = new FlowLayoutPanel();
-                f.Size = tpg.Size;                
+                f.Size = tpg.Size;
                 foreach (Model.Product item2 in item.Value)
                 {
                     Button b = new Button();
@@ -47,22 +47,20 @@ namespace MiddleProject
                 tpg.Controls.Add(f);
             }
 
-
-
-
+            panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth, this.Height);
+            panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
+            tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
+            
             for (int i = 0; i < 10; i++)
             {
                 var p = new Panel.UserPurchaseItem();
                 p.numberLabel.Text = (i + 1).ToString();
-                if (i % 2 == 0 && i % 3 > 0) { p.BackColor = Color.FromArgb(179, 204, 255); }
-                else if (i % 3 == 0) { p.BackColor = Color.FromArgb(179, 236, 255); }
+                //if (i % 2 == 0 && i % 3 > 0) { p.BackColor = Color.FromArgb(179, 204, 255); }
+                //else if (i % 3 == 0) { p.BackColor = Color.FromArgb(179, 236, 255); }
                 p.lblNote.Text = (i + new Random().Next(10, 1000)).GetHashCode().ToString();
                 panel4.Controls.Add(p);
             }
 
-            panel3.Size = new Size((int)((this.Width - panel1.Width) * panel3Width), this.Height);
-            panel4.Size = new Size((int)(this.Width - panel1.Width - panel3.Width), this.Height);
-            tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
 
         }
 
@@ -78,8 +76,8 @@ namespace MiddleProject
 
         private void FrontOperate_SizeChanged(object sender, EventArgs e)
         {
-            panel3.Size = new Size((int)((this.Width - panel1.Width) * panel3Width), this.Height);
-            panel4.Size = new Size((int)(this.Width - panel1.Width - panel3.Width), this.Height);
+            panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth, this.Height);
+            panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
         }
 

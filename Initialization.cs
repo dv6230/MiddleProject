@@ -36,8 +36,6 @@ namespace MiddleProject
                 rd.Close();
                 cn.Close();
 
-                System.Console.WriteLine(productType);
-
                 var p = new Model.Product();
                 p.Name = reader["name"].ToString();
                 p.Price = (int)reader["price"];

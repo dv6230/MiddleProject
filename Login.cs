@@ -25,7 +25,6 @@ namespace MiddleProject
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Console.WriteLine("hello");
                 loginCheck();
             }
         }
@@ -50,7 +49,7 @@ namespace MiddleProject
                 {
                     this.Hide();
                     Model.GolbalVar.userId = (int)reader["id"];
-                    new Initialization(); // 初始化
+                    
                     var form2 = new FrontOperate();
                     form2.Closed += (s, args) => this.Close();
                     form2.Show();
