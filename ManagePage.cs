@@ -13,14 +13,7 @@ namespace MiddleProject
         private void ManagePage_Load(object sender, EventArgs e)
         {
             var a = menuStrip1.Items;
-            foreach (var item in a)
-            {
-                var t = (ToolStripMenuItem)item;
-                if (t.Text.Equals("庫存"))
-                {
-                    t.Visible = false; 
-                }
-            }
+            
         }
 
         private void ManagePage_SizeChanged(object sender, EventArgs e)
