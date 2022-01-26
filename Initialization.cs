@@ -35,19 +35,25 @@ namespace MiddleProject
                 rd.Close();
                 cn.Close();
 
-                var p = new Model.Product();
-                p.Name = reader["name"].ToString();
-                p.Price = (int)reader["price"];
-                p.FoodType = productType;
+                var product = new Model.Product();
+                product.Id = (int)reader["id"];
+                product.Name = reader["name"].ToString();
+                product.Price = (int)reader["price"];
+                product.FoodType = productType;
+
+                List<Model.Ingredients> ingredients = Model.GolbalVar.db.Queryable<Model.Ingredients>()
+                    .Where(i => i.Id == (int)reader["id"]).ToList();
+
+                product.ingredient = new List<Model.Ingredients>(ingredients);
 
                 if (productDict.ContainsKey(productType))
                 {
-                    productDict[productType].Add(p);
+                    productDict[productType].Add(product);
                 }
                 else
                 {
                     var list = new List<Model.Product>();
-                    list.Add(p);
+                    list.Add(product);
                     productDict.Add(productType, list);
                 }
             }

@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GolbalVar.cs" />
+    <Compile Include="Model\Ingredients.cs" />
     <Compile Include="Model\Permission.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Account.cs" />

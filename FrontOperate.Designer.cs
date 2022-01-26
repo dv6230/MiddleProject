@@ -60,6 +60,7 @@ namespace MiddleProject
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.CountSelect = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -150,6 +151,7 @@ namespace MiddleProject
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.CountSelect);
             this.panel3.Controls.Add(this.ingredientPanel);
             this.panel3.Controls.Add(this.label5);
@@ -426,6 +428,17 @@ namespace MiddleProject
             0,
             0});
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label3.Location = new System.Drawing.Point(261, 338);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 31);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "單價";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrontSide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -483,5 +496,6 @@ namespace MiddleProject
         private System.Windows.Forms.Label itemPriceLabel;
         private System.Windows.Forms.FlowLayoutPanel ingredientPanel;
         private System.Windows.Forms.NumericUpDown CountSelect;
+        private System.Windows.Forms.Label label3;
     }
 }

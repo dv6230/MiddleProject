@@ -19,6 +19,8 @@ namespace MiddleProject
 
         Model.Product product1 = new Model.Product();
 
+        List<Model.Ingredients> selectItem = new List<Model.Ingredients>();
+
         public FrontSide()
         {
             InitializeComponent();
@@ -69,8 +71,39 @@ namespace MiddleProject
             Button button = (Button)sender;
             Model.Product p = (Model.Product)button.Tag;
             product1 = new Model.Product(p.Name, p.Price);
+
             itemNameLabel.Text = p.Name;
             itemPriceLabel.Text = p.Price.ToString();
+
+            ingredientPanel.Controls.Clear();
+            foreach (var item in p.ingredient)
+            {
+                CheckBox cb = new CheckBox();
+                cb.Text = item.name;
+                cb.BackColor = Color.LightBlue;
+                cb.AutoSize = true;
+                cb.TextAlign = ContentAlignment.MiddleCenter;
+                cb.Padding = new Padding(4);
+                cb.Tag = item; 
+                cb.CheckedChanged += Cb_CheckedChanged;
+                ingredientPanel.Controls.Add(cb);
+            }
+        }
+
+        private void Cb_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cb = (CheckBox)sender;
+            Model.Ingredients tg = (Model.Ingredients)cb.Tag; 
+            if (cb.Checked)
+            {
+                selectItem.Add(tg);
+            }
+            else
+            {
+                selectItem.Remove(tg);
+            }
+
+            //throw new NotImplementedException();
         }
 
         private void Tpg_SizeChanged(object sender, EventArgs e)
@@ -150,6 +183,7 @@ namespace MiddleProject
 
             p.Count = count;
             p.TotalPrice = count * p.Price;
+            p.UserSelectIngredient = new List<Model.Ingredients>(selectItem) ; 
 
             if (radioSweet1.Checked) p.Sweet = "正常";
             else if (radioSweet2.Checked) p.Sweet = "7分糖";
@@ -185,7 +219,7 @@ namespace MiddleProject
                 upanel.lblPrice.Text = item.Price.ToString();
                 upanel.lblTotalPrice.Text = item.TotalPrice.ToString();
                 upanel.lblNote.Text = ingredientTostr(item.UserSelectIngredient);
-                //upanel.btnDeleteItem.Click += BtnDeleteItem_Click;
+                // upanel.btnDeleteItem.Click += BtnDeleteItem_Click;
                 upanel.btnDeleteItem.Tag = (UserPurchaseItem)upanel;
                 upanel.Tag = index;
                 upanel.numberLabel.Text = index.ToString();
@@ -197,12 +231,12 @@ namespace MiddleProject
 
         }
 
-        string ingredientTostr(List<string> list)
+        string ingredientTostr(List<Model.Ingredients> list)
         {
             string s = "";
             foreach (var item in list)
             {
-                s += item + ", ";
+                s += item.name + ", ";
             }
             if (s.Length > 2) s = s.Substring(0, s.Length - 2);
             return s;
@@ -210,6 +244,7 @@ namespace MiddleProject
 
         void defaultSelect()
         {
+
             radioSweet1.Checked = false;
             radioSweet2.Checked = false;
             radioSweet3.Checked = false;
