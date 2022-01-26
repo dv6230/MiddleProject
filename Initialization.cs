@@ -13,7 +13,7 @@ namespace MiddleProject
 
         void getFood()
         {
-            var productList = Model.GolbalVar.productList;
+            var productDict = Model.GolbalVar.productDictionary;
             string sql = "SELECT * FROM products";
             SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();
@@ -40,41 +40,19 @@ namespace MiddleProject
                 p.Price = (int)reader["price"];
                 p.FoodType = productType;
 
-                if (productList.ContainsKey(productType))
+                if (productDict.ContainsKey(productType))
                 {
-                    productList[productType].Add(p);
+                    productDict[productType].Add(p);
                 }
                 else
                 {
                     var list = new List<Model.Product>();
                     list.Add(p);
-                    productList.Add(productType, list);
+                    productDict.Add(productType, list);
                 }
-
-
             }
             reader.Close();
             con.Close();
         }
-
-        void getUserAuth()
-        {
-            var userPermission = Model.GolbalVar.userPermissionList;
-            string sql = "SELECT * FROM userPermission WHERE id = @Id";
-            SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
-            con.Open();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@Id", Model.GolbalVar.userId);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                userPermission.Add(reader["name"].ToString());
-            }
-            reader.Close();
-            con.Close();
-        }
-
-
-
     }
 }

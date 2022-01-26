@@ -12,7 +12,7 @@ namespace MiddleProject.Model
         static public List<string> ingredientList = new List<string>();
         static public List<string> userPermissionList = new List<string>();
 
-        static public Dictionary<string, List<Product>> productList = new Dictionary<string, List<Product>>();
+        static public Dictionary<string, List<Product>> productDictionary = new Dictionary<string, List<Product>>();
 
         static public string[] sweetLevel = { "無糖", "三分", "五分", "七分", "全糖" };
         static public string[] temperature = { "正常", "少冰", "微冰", "去冰", "常溫" };

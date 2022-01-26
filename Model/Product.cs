@@ -9,8 +9,8 @@ namespace MiddleProject.Model
         private int price;
         private int count;
         private int total;
-        public List<string> ingredient;
-        private List<string> userSelectIngredient;
+        public List<string> ingredient = new List<string>();
+        private List<string> userSelectIngredient = new List<string>();
         private string sweet;
         private string temperature;
 
@@ -55,10 +55,15 @@ namespace MiddleProject.Model
             str += this.sweet + "/";
             str += this.temperature + "/";
             str += "[";
-            foreach (var item in userSelectIngredient)
+
+            if (userSelectIngredient != null && userSelectIngredient.Count > 0)
             {
-                str += item + " ";
+                foreach (var item in userSelectIngredient)
+                {
+                    str += item + " ";
+                }
             }
+
             str += "]";
             return str;
         }

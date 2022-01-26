@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiddleProject.Panel;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,12 +10,14 @@ namespace MiddleProject
     {
 
         int padwidth = 22;
-        List<Control> controls = new List<Control>();
+        // List<Control> controls = new List<Control>();
 
         Panel.AddCustomer addCustomer = new Panel.AddCustomer();
 
         Color sideDefaultColor = Color.FromArgb(64, 64, 64);
         Color activeColor = Color.Gray;
+
+        Model.Product product1 = new Model.Product();
 
         public FrontSide()
         {
@@ -25,7 +28,7 @@ namespace MiddleProject
         {
             slideOrderBtn.BackColor = activeColor;
 
-            var productList = Model.GolbalVar.productList;
+            var productList = Model.GolbalVar.productDictionary;
 
             tabControl1.Controls.Clear();
             foreach (KeyValuePair<string, List<Model.Product>> item in productList)
@@ -48,30 +51,26 @@ namespace MiddleProject
                     Button b = new Button();
                     b.Text = item2.Name;
                     b.Tag = item2;
+                    b.Click += productDetail;
                     f.Controls.Add(b);
                 }
 
                 tpg.Controls.Add(f);
             }
 
-            panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth, this.Height);
+            panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth + 5, this.Height);
             panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
 
-            for (int i = 0; i < 10; i++)
-            {
-                var p = new Panel.UserPurchaseItem();
-                p.numberLabel.Text = (i + 1).ToString();
-                //if (i % 2 == 0 && i % 3 > 0) { p.BackColor = Color.FromArgb(179, 204, 255); }
-                //else if (i % 3 == 0) { p.BackColor = Color.FromArgb(179, 236, 255); }
-                p.lblNote.Text = (i + new Random().Next(10, 1000)).GetHashCode().ToString();
-                panel4.Controls.Add(p);
-            }
+        }
 
-            controls.Add(panel3);
-            controls.Add(panel4);
-            controls.Add(tabControl1);
-
+        private void productDetail(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Model.Product p = (Model.Product)button.Tag;
+            product1 = new Model.Product(p.Name, p.Price);
+            itemNameLabel.Text = p.Name;
+            itemPriceLabel.Text = p.Price.ToString();
         }
 
         private void Tpg_SizeChanged(object sender, EventArgs e)
@@ -79,9 +78,7 @@ namespace MiddleProject
             var p = (TabPage)sender;
             Control.ControlCollection a = p.Controls;
             if (a.Count == 0) return;
-
             a[0].Size = p.Size;
-
         }
 
         private void FrontOperate_SizeChanged(object sender, EventArgs e)
@@ -133,5 +130,104 @@ namespace MiddleProject
             slideAddMemberBtn.BackColor = sideDefaultColor;
             btn.BackColor = activeColor;
         }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            if (product1 == null || product1.Name == null || product1.Name.Length <= 0)
+            {
+                MessageBox.Show("請點餐");
+                return;
+            }
+
+            int count = (int)CountSelect.Value;
+            if (CountSelect.Value.ToString().Length <= 0 || count < 1)
+            {
+                MessageBox.Show("請輸入數量");
+                return;
+            }
+
+            var p = new Model.Product(product1.Name, product1.Price);
+
+            p.Count = count;
+            p.TotalPrice = count * p.Price;
+
+            if (radioSweet1.Checked) p.Sweet = "正常";
+            else if (radioSweet2.Checked) p.Sweet = "7分糖";
+            else if (radioSweet3.Checked) p.Sweet = "5分糖";
+            else if (radioSweet4.Checked) p.Sweet = "3分糖";
+            else if (radioSweet5.Checked) p.Sweet = "無糖";
+            else
+            {
+                MessageBox.Show("請選擇甜度");
+                return;
+            }
+
+            if (radioTemp1.Checked) p.Sweet = "正常";
+            else if (radioTemp2.Checked) p.Sweet = "少冰";
+            else if (radioTemp3.Checked) p.Sweet = "微冰";
+            else if (radioTemp4.Checked) p.Sweet = "去冰";
+            else if (radioTemp5.Checked) p.Sweet = "常溫";
+            else
+            {
+                MessageBox.Show("請選擇冰塊");
+                return;
+            }
+
+            Model.GolbalVar.purchaseList.Add(p);
+
+            this.panel4.Controls.Clear();
+            int index = 1;
+            foreach (var item in Model.GolbalVar.purchaseList)
+            {
+                UserPurchaseItem upanel = new UserPurchaseItem();
+                upanel.lblName.Text = item.Name;
+                upanel.lblCount.Text = item.Count.ToString();
+                upanel.lblPrice.Text = item.Price.ToString();
+                upanel.lblTotalPrice.Text = item.TotalPrice.ToString();
+                upanel.lblNote.Text = ingredientTostr(item.UserSelectIngredient);
+                //upanel.btnDeleteItem.Click += BtnDeleteItem_Click;
+                upanel.btnDeleteItem.Tag = (UserPurchaseItem)upanel;
+                upanel.Tag = index;
+                upanel.numberLabel.Text = index.ToString();
+                panel4.Controls.Add(upanel);
+                index++;
+            }
+
+            defaultSelect();
+
+        }
+
+        string ingredientTostr(List<string> list)
+        {
+            string s = "";
+            foreach (var item in list)
+            {
+                s += item + ", ";
+            }
+            if (s.Length > 2) s = s.Substring(0, s.Length - 2);
+            return s;
+        }
+
+        void defaultSelect()
+        {
+            radioSweet1.Checked = false;
+            radioSweet2.Checked = false;
+            radioSweet3.Checked = false;
+            radioSweet4.Checked = false;
+            radioSweet5.Checked = false;
+
+            radioTemp1.Checked = false;
+            radioTemp2.Checked = false;
+            radioTemp3.Checked = false;
+            radioTemp4.Checked = false;
+            radioTemp5.Checked = false;
+
+            CountSelect.Value = 1;
+
+            itemNameLabel.Text = "";
+            itemPriceLabel.Text = "";
+
+        }
+
     }
 }
