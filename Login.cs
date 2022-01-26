@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MiddleProject.Model;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -32,8 +34,32 @@ namespace MiddleProject
         void loginCheck()
         {
 
+            var con = GolbalVar.db;
+
+            List<Accounts> list = con.Queryable<Accounts>().Where(it => it.account == tBoxAccount.Text).ToList();
+
+            if (list.Count > 0 && list[0].password.Equals(tBoxPassword.Text))
+            {
+                List<Permission> pList = con.Queryable<Permission>().Where(it => it.accountId == list[0].Id).ToList();
+                foreach (var it in pList)
+                {
+                    GolbalVar.userPermissionList.Add(it.permitName);
+                }
+                this.Hide();
+                GolbalVar.userId = list[0].Id;
+
+                var form2 = new FrontSide();
+                form2.Closed += (s, args) => this.Close();
+                form2.Show();
+            }
+            else { MessageBox.Show("帳號或密碼錯誤"); }
+
+        }
+
+        void checkAccount()
+        {
             string sql = "SELECT * from accounts WHERE account = @acnt ";
-            SqlConnection con = new SqlConnection(DBConnection.DBstr);
+            SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@acnt", tBoxAccount.Text);
@@ -49,13 +75,13 @@ namespace MiddleProject
                 {
                     this.Hide();
                     Model.GolbalVar.userId = (int)reader["id"];
-                    
-                    var form2 = new FrontOperate();
+
+                    var form2 = new FrontSide();
                     form2.Closed += (s, args) => this.Close();
                     form2.Show();
                 }
             }
         }
-      
+
     }
 }

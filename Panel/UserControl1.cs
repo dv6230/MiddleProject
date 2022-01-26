@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiddleProject.Panel
 {
-    public partial class UserControl1 : UserControl
+    public partial class SearchOrderPanel : UserControl
     {
-        public UserControl1()
+        public SearchOrderPanel()
         {
             InitializeComponent();
         }

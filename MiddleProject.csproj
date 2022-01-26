@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SqlSugar, Version=5.0.5.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SqlSugar.5.0.5.4\lib\SqlSugar.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -83,8 +86,17 @@
     <Compile Include="ManagePage.Designer.cs">
       <DependentUpon>ManagePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GolbalVar.cs" />
+    <Compile Include="Model\Permission.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Panel\AddCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +120,9 @@
     <EmbeddedResource Include="ManagePage.resx">
       <DependentUpon>ManagePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

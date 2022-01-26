@@ -9,21 +9,20 @@ namespace MiddleProject
         public Initialization()
         {
             getFood();
-            //getUserAuth();
         }
 
         void getFood()
         {
             var productList = Model.GolbalVar.productList;
             string sql = "SELECT * FROM products";
-            SqlConnection con = new SqlConnection(DBConnection.DBstr);
+            SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
 
-                SqlConnection cn = new SqlConnection(DBConnection.DBstr);
+                SqlConnection cn = new SqlConnection(DBProduceStr.DBstr);
                 cn.Open();
                 SqlCommand cm = new SqlCommand($"SELECT * FROM productType WHERE id = {(int)reader["productTypeId"]}", cn);
                 SqlDataReader rd = cm.ExecuteReader();
@@ -62,7 +61,7 @@ namespace MiddleProject
         {
             var userPermission = Model.GolbalVar.userPermissionList;
             string sql = "SELECT * FROM userPermission WHERE id = @Id";
-            SqlConnection con = new SqlConnection(DBConnection.DBstr);
+            SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@Id", Model.GolbalVar.userId);

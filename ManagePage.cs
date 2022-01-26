@@ -24,7 +24,7 @@ namespace MiddleProject
         private void 訂單查詢ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             contentPanel.Controls.Clear();
-            var p = new Panel.UserControl1();
+            var p = new Panel.SearchOrderPanel();
             p.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(p);
         }

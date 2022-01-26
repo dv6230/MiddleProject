@@ -2,7 +2,7 @@
 
 namespace MiddleProject
 {
-    class DBConnection
+    class DBProduceStr
     {
         public static string DBstr = "";
 
@@ -14,8 +14,6 @@ namespace MiddleProject
             scrb.IntegratedSecurity = true;
             DBstr = scrb.ToString();
         }
-
-        
-
+       
     }
 }

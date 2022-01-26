@@ -1,7 +1,7 @@
 ﻿
 namespace MiddleProject
 {
-    partial class FrontOperate
+    partial class FrontSide
     {
         /// <summary>
         /// Required designer variable.
@@ -56,17 +56,16 @@ namespace MiddleProject
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 670);
+            this.panel1.Size = new System.Drawing.Size(180, 558);
             this.panel1.TabIndex = 0;
             // 
             // btnCloseSystem
             // 
-            this.btnCloseSystem.Location = new System.Drawing.Point(0, 576);
+            this.btnCloseSystem.Location = new System.Drawing.Point(0, 480);
             this.btnCloseSystem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseSystem.Name = "btnCloseSystem";
-            this.btnCloseSystem.Size = new System.Drawing.Size(202, 46);
+            this.btnCloseSystem.Size = new System.Drawing.Size(180, 38);
             this.btnCloseSystem.TabIndex = 3;
             this.btnCloseSystem.Text = "關閉";
             this.btnCloseSystem.UseVisualStyleBackColor = true;
@@ -74,10 +73,10 @@ namespace MiddleProject
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 524);
+            this.button3.Location = new System.Drawing.Point(0, 437);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 46);
+            this.button3.Size = new System.Drawing.Size(180, 38);
             this.button3.TabIndex = 2;
             this.button3.Text = "後台管理";
             this.button3.UseVisualStyleBackColor = true;
@@ -85,33 +84,34 @@ namespace MiddleProject
             // 
             // btnAddMember
             // 
-            this.btnAddMember.Location = new System.Drawing.Point(0, 91);
+            this.btnAddMember.Location = new System.Drawing.Point(0, 76);
             this.btnAddMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(202, 46);
+            this.btnAddMember.Size = new System.Drawing.Size(180, 38);
             this.btnAddMember.TabIndex = 1;
             this.btnAddMember.Text = "新增會員";
             this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(0, 28);
+            this.btnOrder.Location = new System.Drawing.Point(0, 23);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(202, 46);
+            this.btnOrder.Size = new System.Drawing.Size(180, 38);
             this.btnOrder.TabIndex = 0;
             this.btnOrder.Text = "點餐";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // panel4
             // 
             this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(770, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(685, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(493, 670);
+            this.panel4.Size = new System.Drawing.Size(438, 558);
             this.panel4.TabIndex = 2;
             // 
             // panel3
@@ -121,19 +121,17 @@ namespace MiddleProject
             this.panel3.Controls.Add(this.tabControl1);
             this.panel3.Controls.Add(this.btnAddItem);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(202, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(180, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(568, 670);
+            this.panel3.Size = new System.Drawing.Size(505, 558);
             this.panel3.TabIndex = 0;
             // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(441, 608);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReset.Location = new System.Drawing.Point(392, 507);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(106, 38);
+            this.btnReset.Size = new System.Drawing.Size(94, 32);
             this.btnReset.TabIndex = 1;
             this.btnReset.Text = "加入";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -143,20 +141,18 @@ namespace MiddleProject
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(568, 397);
+            this.tabControl1.Size = new System.Drawing.Size(505, 331);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(560, 365);
+            this.tabPage2.Size = new System.Drawing.Size(497, 302);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -165,33 +161,30 @@ namespace MiddleProject
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 2);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(554, 361);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(491, 298);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnAddItem
             // 
             this.btnAddItem.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Location = new System.Drawing.Point(441, 548);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddItem.Location = new System.Drawing.Point(392, 457);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(106, 38);
+            this.btnAddItem.Size = new System.Drawing.Size(94, 32);
             this.btnAddItem.TabIndex = 0;
             this.btnAddItem.Text = "加入";
             this.btnAddItem.UseVisualStyleBackColor = true;
             // 
-            // FrontOperate
+            // FrontSide
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1262, 670);
+            this.ClientSize = new System.Drawing.Size(1122, 558);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrontOperate";
+            this.Name = "FrontSide";
             this.Text = "點餐";
             this.Load += new System.EventHandler(this.FrontOperate_Load);
             this.SizeChanged += new System.EventHandler(this.FrontOperate_SizeChanged);

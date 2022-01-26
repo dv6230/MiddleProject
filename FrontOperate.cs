@@ -5,12 +5,15 @@ using System.Windows.Forms;
 
 namespace MiddleProject
 {
-    public partial class FrontOperate : Form
+    public partial class FrontSide : Form
     {
 
         int padwidth = 22;
+        List<Control> controls = new List<Control>();
 
-        public FrontOperate()
+        Panel.AddCustomer addCustomer = new Panel.AddCustomer();
+
+        public FrontSide()
         {
             InitializeComponent();
         }
@@ -61,6 +64,9 @@ namespace MiddleProject
                 panel4.Controls.Add(p);
             }
 
+            controls.Add(panel3);
+            controls.Add(panel4);
+            controls.Add(tabControl1);
 
         }
 
@@ -96,6 +102,23 @@ namespace MiddleProject
             var manage = new ManagePage();
             manage.Closed += (s, args) => this.Close();
             manage.Show();
+        }
+
+        private void btnAddMember_Click(object sender, EventArgs e)
+        {
+            addCustomer = new Panel.AddCustomer();
+            addCustomer.Visible = true;
+            addCustomer.Location = new Point(180, 0);            
+            this.Controls.Add(addCustomer);
+            panel3.Visible = false;
+            panel4.Visible = false;            
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;            
+            panel4.Visible = true;
+            addCustomer.Visible = false;
         }
     }
 }

@@ -14,10 +14,10 @@ namespace MiddleProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new ManagePage());
-            DBConnection d = new DBConnection();
-            d.ProduceConnectStr();            
+            var d = new DBProduceStr();
+            d.ProduceConnectStr();           
             new Initialization(); // 初始化
-            Application.Run(new Login());            
+            Application.Run(new FrontSide());
         }
     }
 }
