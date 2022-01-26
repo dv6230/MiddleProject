@@ -8,6 +8,7 @@ namespace MiddleProject.Model
 {
     internal class Accounts
     {
+        [SqlSugar.SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
         public string account { get; set; }
         public string password { get; set; }

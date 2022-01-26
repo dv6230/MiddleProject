@@ -8,6 +8,7 @@ namespace MiddleProject.Model
 {
     internal class Ingredients
     {
+        [SqlSugar.SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
         public string name { get; set; }
         public int price { get; set; }

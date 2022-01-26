@@ -36,6 +36,8 @@ namespace MiddleProject
             this.slideOrderBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CountSelect = new System.Windows.Forms.NumericUpDown();
             this.ingredientPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,20 +61,20 @@ namespace MiddleProject
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.CountSelect = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSelect)).BeginInit();
             this.panel2.SuspendLayout();
             this.sweetPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CountSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCloseSystem);
             this.panel1.Controls.Add(this.SlideBackEndBtn);
             this.panel1.Controls.Add(this.slideAddMemberBtn);
@@ -169,6 +171,36 @@ namespace MiddleProject
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(529, 558);
             this.panel3.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label3.Location = new System.Drawing.Point(261, 338);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 31);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "單價";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CountSelect
+            // 
+            this.CountSelect.Font = new System.Drawing.Font("新細明體", 12F);
+            this.CountSelect.Location = new System.Drawing.Point(369, 493);
+            this.CountSelect.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CountSelect.Name = "CountSelect";
+            this.CountSelect.Size = new System.Drawing.Size(55, 31);
+            this.CountSelect.TabIndex = 14;
+            this.CountSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.CountSelect.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ingredientPanel
             // 
@@ -409,35 +441,15 @@ namespace MiddleProject
             this.flowLayoutPanel1.Size = new System.Drawing.Size(515, 298);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // CountSelect
+            // button1
             // 
-            this.CountSelect.Font = new System.Drawing.Font("新細明體", 12F);
-            this.CountSelect.Location = new System.Drawing.Point(369, 493);
-            this.CountSelect.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CountSelect.Name = "CountSelect";
-            this.CountSelect.Size = new System.Drawing.Size(55, 31);
-            this.CountSelect.TabIndex = 14;
-            this.CountSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.CountSelect.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label3.Location = new System.Drawing.Point(261, 338);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 31);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "單價";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(50, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrontSide
             // 
@@ -454,11 +466,11 @@ namespace MiddleProject
             this.SizeChanged += new System.EventHandler(this.FrontOperate_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CountSelect)).EndInit();
             this.panel2.ResumeLayout(false);
             this.sweetPanel.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CountSelect)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,5 +509,6 @@ namespace MiddleProject
         private System.Windows.Forms.FlowLayoutPanel ingredientPanel;
         private System.Windows.Forms.NumericUpDown CountSelect;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

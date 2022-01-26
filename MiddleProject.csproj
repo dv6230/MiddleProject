@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkout.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Initialization.cs" />
     <Compile Include="Login.cs">
@@ -89,6 +90,8 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GolbalVar.cs" />
     <Compile Include="Model\Ingredients.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderDetail.cs" />
     <Compile Include="Model\Permission.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Account.cs" />

@@ -4,7 +4,7 @@ namespace MiddleProject.Model
 {
     class Product
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
         private string foodType;
         private string name;
         private int price;
@@ -15,6 +15,7 @@ namespace MiddleProject.Model
         private string sweet;
         private string temperature;
 
+        public int productTypeId { get; set; }
         public string Name { get => name; set => name = value; }
         public int Price { get => price; set => price = value; }
         public int Count { get => count; set => count = value; }
