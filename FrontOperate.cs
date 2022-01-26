@@ -262,6 +262,8 @@ namespace MiddleProject
             itemNameLabel.Text = "";
             itemPriceLabel.Text = "";
 
+            selectItem.Clear();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

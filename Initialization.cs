@@ -41,10 +41,10 @@ namespace MiddleProject
                 product.Price = (int)reader["price"];
                 product.FoodType = productType;
 
-                List<Model.Ingredients> ingredients = Model.GolbalVar.db.Queryable<Model.Ingredients>()
+                List<Model.ProductIngredient> ingredients = Model.GolbalVar.db.Queryable<Model.ProductIngredient>()
                     .Where(i => i.Id == (int)reader["id"]).ToList();
 
-                product.ingredient = new List<Model.Ingredients>(ingredients);
+                product.ingredient = new List<Model.ProductIngredient>(ingredients);
 
                 if (productDict.ContainsKey(productType))
                 {

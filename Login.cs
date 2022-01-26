@@ -69,6 +69,7 @@ namespace MiddleProject
                 MessageBox.Show("帳號或密碼錯誤");
                 return;
             }
+
             while (reader.Read())
             {
                 if (reader["password"].Equals(tBoxPassword.Text))

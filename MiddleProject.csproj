@@ -95,6 +95,7 @@
     <Compile Include="Model\Permission.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\ProductIngredient.cs" />
     <Compile Include="Panel\AddCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
