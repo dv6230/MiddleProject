@@ -13,6 +13,9 @@ namespace MiddleProject
 
         Panel.AddCustomer addCustomer = new Panel.AddCustomer();
 
+        Color sideDefaultColor = Color.FromArgb(64, 64, 64);
+        Color activeColor = Color.Gray;
+
         public FrontSide()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace MiddleProject
 
         private void FrontOperate_Load(object sender, EventArgs e)
         {
+            slideOrderBtn.BackColor = activeColor;
 
             var productList = Model.GolbalVar.productList;
 
@@ -53,7 +57,7 @@ namespace MiddleProject
             panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth, this.Height);
             panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
-            
+
             for (int i = 0; i < 10; i++)
             {
                 var p = new Panel.UserPurchaseItem();
@@ -100,7 +104,7 @@ namespace MiddleProject
         {
             // this.Hide();
             var manage = new ManagePage();
-            manage.Closed += (s, args) => this.Close();
+            //manage.Closed += (s, args) => this.Close();
             manage.Show();
         }
 
@@ -108,17 +112,26 @@ namespace MiddleProject
         {
             addCustomer = new Panel.AddCustomer();
             addCustomer.Visible = true;
-            addCustomer.Location = new Point(180, 0);            
+            addCustomer.Location = new Point(180, 0);
             this.Controls.Add(addCustomer);
             panel3.Visible = false;
-            panel4.Visible = false;            
+            panel4.Visible = false;
+            slideBtnColor(slideAddMemberBtn);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            panel3.Visible = true;            
+            panel3.Visible = true;
             panel4.Visible = true;
             addCustomer.Visible = false;
+            slideBtnColor(slideOrderBtn);
+        }
+
+        void slideBtnColor(Button btn)
+        {
+            slideOrderBtn.BackColor = sideDefaultColor;
+            slideAddMemberBtn.BackColor = sideDefaultColor;
+            btn.BackColor = activeColor;
         }
     }
 }
