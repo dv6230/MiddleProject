@@ -41,10 +41,19 @@ namespace MiddleProject
                 product.Price = (int)reader["price"];
                 product.FoodType = productType;
 
-                List<Model.ProductIngredient> ingredients = Model.GolbalVar.db.Queryable<Model.ProductIngredient>()
-                    .Where(i => i.Id == (int)reader["id"]).ToList();
+                //List<Model.ProductIngredient> ingredients = Model.GolbalVar.db.Queryable<Model.ProductIngredient>()
+                //    .Where(i => i.Id == (int)reader["id"]).ToList();
 
-                product.ingredient = new List<Model.ProductIngredient>(ingredients);
+                var query = Model.GolbalVar.db.Queryable<Model.ProductIngredient>()
+                    .InnerJoin<Model.Ingredients>((prod, ingredient) => prod.ingredientId == ingredient.Id)
+                    .Where(
+                        prod => prod.Id == (int)reader["id"]).
+                        Select((prod, ingredient) =>
+                        new { id = ingredient.Id, name = ingredient.name, price = ingredient.price }
+                    ).ToList();
+                System.Console.WriteLine(query);
+
+                // product.ingredient = new List<Model.ProductIngredient>(ingredients);
 
                 if (productDict.ContainsKey(productType))
                 {

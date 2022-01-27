@@ -10,8 +10,8 @@ namespace MiddleProject.Model
         private int price;
         private int count;
         private int total;
-        public List<Model.Ingredients> ingredient = new List<Model.Ingredients>();
-        private List<Model.Ingredients> userSelectIngredient = new List<Model.Ingredients>();
+        public List<Ingredients> ingredient = new List<Ingredients>();
+        private List<Ingredients> userSelectIngredient = new List<Ingredients>();
         private string sweet;
         private string temperature;
 
@@ -20,7 +20,7 @@ namespace MiddleProject.Model
         public int Price { get => price; set => price = value; }
         public int Count { get => count; set => count = value; }
         public int TotalPrice { get => total; set => total = value; }
-        public List<Model.Ingredients> UserSelectIngredient { get => userSelectIngredient; set => userSelectIngredient = value; }
+        public List<Ingredients> UserSelectIngredient { get => userSelectIngredient; set => userSelectIngredient = value; }
         public string Sweet { get => sweet; set => sweet = value; }
         public string Temperature { get => temperature; set => temperature = value; }
         public string FoodType { get => foodType; set => foodType = value; }
