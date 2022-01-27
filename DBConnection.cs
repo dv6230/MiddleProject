@@ -14,6 +14,11 @@ namespace MiddleProject
             scrb.IntegratedSecurity = true;
             DBstr = scrb.ToString();
         }
-       
+
+        public void ProduceConnectStr2()
+        {
+            DBstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MidProject.mdf;Integrated Security=True";
+        }
+
     }
 }

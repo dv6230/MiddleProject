@@ -1,6 +1,6 @@
 USE [MidProject]
 GO
-/****** Object:  Table [dbo].[accounts]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[accounts]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ CREATE TABLE [dbo].[accounts](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[customer]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[customer]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -41,7 +41,7 @@ CREATE TABLE [dbo].[customer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ingredients]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[ingredients]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -56,7 +56,7 @@ CREATE TABLE [dbo].[ingredients](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[orderDetail]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[orderDetail]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -75,7 +75,7 @@ CREATE TABLE [dbo].[orderDetail](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[orders]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[orders]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -92,7 +92,7 @@ CREATE TABLE [dbo].[orders](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[permission]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[permission]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -107,7 +107,7 @@ CREATE TABLE [dbo].[permission](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[productIngredient]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[productIngredient]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -122,7 +122,7 @@ CREATE TABLE [dbo].[productIngredient](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[products]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[products]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +139,7 @@ CREATE TABLE [dbo].[products](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[productType]    Script Date: 2022/1/26 下午 04:31:08 ******/
+/****** Object:  Table [dbo].[productType]    Script Date: 2022/1/27 下午 01:29:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,12 +159,9 @@ ALTER TABLE [dbo].[ingredients] ADD  CONSTRAINT [DF_ingredients_price]  DEFAULT 
 GO
 ALTER TABLE [dbo].[orders] ADD  CONSTRAINT [DF_orders_orderDateTime]  DEFAULT (getdate()) FOR [orderDateTime]
 GO
+ALTER TABLE [dbo].[products] ADD  CONSTRAINT [DF_products_note]  DEFAULT (N'n') FOR [note]
+GO
 ALTER TABLE [dbo].[products] ADD  CONSTRAINT [DF_products_productTypeId]  DEFAULT ((1)) FOR [productTypeId]
-GO
-ALTER TABLE [dbo].[products]  WITH CHECK ADD  CONSTRAINT [FK_products_productType] FOREIGN KEY([productTypeId])
-REFERENCES [dbo].[productType] ([Id])
-GO
-ALTER TABLE [dbo].[products] CHECK CONSTRAINT [FK_products_productType]
 GO
 ALTER TABLE [dbo].[productType]  WITH CHECK ADD  CONSTRAINT [FK_productType_productType] FOREIGN KEY([Id])
 REFERENCES [dbo].[productType] ([Id])
