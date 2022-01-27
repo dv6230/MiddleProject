@@ -17,6 +17,11 @@ namespace MiddleProject.Panel
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
+            fillCheck();
+        }
+
+        void fillCheck()
+        {
             List<Model.Ingredients> Ingredients = new List<Model.Ingredients>();
 
             Ingredients = Model.GolbalVar.db.Queryable<Model.Ingredients>().ToList();
@@ -25,7 +30,6 @@ namespace MiddleProject.Panel
             {
                 CheckBox cb = new CheckBox();
                 cb.Text = item.name;
-                // cb.BackColor = Color.LightBlue;
                 cb.AutoSize = true;
                 cb.TextAlign = ContentAlignment.MiddleCenter;
                 cb.Padding = new Padding(4);
@@ -40,7 +44,6 @@ namespace MiddleProject.Panel
             {
                 comboBox1.Items.Add(item.Name);
             }
-
         }
 
         private void Cb_CheckedChanged(object sender, EventArgs e)
@@ -85,10 +88,13 @@ namespace MiddleProject.Panel
                 Model.GolbalVar.db.Insertable(productIngredient).ExecuteCommand();
             }
             MessageBox.Show("新增完成");
-
+            comboBox1.SelectedIndex = -1;
+            tBoxname.Text = "";
+            tBoxPrice.Text = "";
+            fillCheck();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

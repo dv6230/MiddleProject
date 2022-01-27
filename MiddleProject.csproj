@@ -119,6 +119,12 @@
     <Compile Include="Panel\IngredientManage.Designer.cs">
       <DependentUpon>IngredientManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\ProductManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\ProductManage.Designer.cs">
+      <DependentUpon>ProductManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\ProductType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\IngredientManage.resx">
       <DependentUpon>IngredientManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\ProductManage.resx">
+      <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\ProductType.resx">
       <DependentUpon>ProductType.cs</DependentUpon>

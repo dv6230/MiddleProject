@@ -15,7 +15,7 @@ namespace MiddleProject.Model
 
         public override string ToString()
         {
-            return this.name;
+            return this.name + " / " + this.price.ToString();
         }
     }
 }

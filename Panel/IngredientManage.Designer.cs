@@ -40,11 +40,12 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("新細明體", 12F);
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(107, 80);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(215, 289);
+            this.listBox1.Size = new System.Drawing.Size(215, 284);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
