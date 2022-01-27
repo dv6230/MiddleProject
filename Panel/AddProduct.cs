@@ -9,7 +9,7 @@ namespace MiddleProject.Panel
     {
 
         List<Model.Ingredients> selectIngredient = new List<Model.Ingredients>();
-
+        List<Model.ProductType> typeList = new List<Model.ProductType>();   
         public AddProduct()
         {
             InitializeComponent();
@@ -33,6 +33,14 @@ namespace MiddleProject.Panel
                 cb.CheckedChanged += Cb_CheckedChanged;
                 IngredientPanel1.Controls.Add(cb);
             }
+
+            typeList = Model.GolbalVar.db.Queryable<Model.ProductType>().ToList();
+            comboBox1.Items.Clear();
+            foreach (var item in typeList)
+            {
+                comboBox1.Items.Add(item.Name);
+            }
+
         }
 
         private void Cb_CheckedChanged(object sender, EventArgs e)
@@ -51,11 +59,33 @@ namespace MiddleProject.Panel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Model.Product p  = new Model.Product();
+            if (comboBox1.SelectedIndex <= -1 )
+            {
+                MessageBox.Show("請選擇類別");
+                return;
+            }
+            Model.Products p  = new Model.Products();
             p.Name = tBoxname.Text;
-            p.Price = int.Parse(tBoxPrice.Text);
+            try
+            {
+                p.Price = int.Parse(tBoxPrice.Text);
+            }
+            catch (Exception)
+            {
+                p.Price = 0 ;
+            }
+            
+            p.ProductTypeId = typeList[comboBox1.SelectedIndex].Id;
             int i = Model.GolbalVar.db.Insertable(p).ExecuteReturnIdentity();
-            Console.WriteLine(i);
+            foreach (var item in selectIngredient)
+            {
+                var productIngredient = new Model.ProductIngredient();
+                productIngredient.productId = i ;
+                productIngredient.ingredientId = item.Id;
+                Model.GolbalVar.db.Insertable(productIngredient).ExecuteCommand();
+            }
+            MessageBox.Show("新增完成");
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

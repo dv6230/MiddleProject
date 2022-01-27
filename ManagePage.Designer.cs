@@ -41,9 +41,9 @@ namespace MiddleProject
             this.管理商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新增配料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.配料管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.類別管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.返回ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.類別管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@ namespace MiddleProject
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(790, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(790, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -113,35 +113,42 @@ namespace MiddleProject
             this.配料管理ToolStripMenuItem,
             this.類別管理ToolStripMenuItem});
             this.商品ToolStripMenuItem.Name = "商品ToolStripMenuItem";
-            this.商品ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.商品ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.商品ToolStripMenuItem.Text = "商品";
             // 
             // 新增商品ToolStripMenuItem
             // 
             this.新增商品ToolStripMenuItem.Name = "新增商品ToolStripMenuItem";
-            this.新增商品ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.新增商品ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.新增商品ToolStripMenuItem.Text = "新增商品";
             this.新增商品ToolStripMenuItem.Click += new System.EventHandler(this.新增商品ToolStripMenuItem_Click);
             // 
             // 管理商品ToolStripMenuItem
             // 
             this.管理商品ToolStripMenuItem.Name = "管理商品ToolStripMenuItem";
-            this.管理商品ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.管理商品ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.管理商品ToolStripMenuItem.Text = "管理商品";
             // 
             // 新增配料ToolStripMenuItem
             // 
             this.新增配料ToolStripMenuItem.Name = "新增配料ToolStripMenuItem";
-            this.新增配料ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.新增配料ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.新增配料ToolStripMenuItem.Text = "新增配料";
             this.新增配料ToolStripMenuItem.Click += new System.EventHandler(this.新增配料ToolStripMenuItem_Click);
             // 
             // 配料管理ToolStripMenuItem
             // 
             this.配料管理ToolStripMenuItem.Name = "配料管理ToolStripMenuItem";
-            this.配料管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.配料管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.配料管理ToolStripMenuItem.Text = "配料管理";
             this.配料管理ToolStripMenuItem.Click += new System.EventHandler(this.配料管理ToolStripMenuItem_Click);
+            // 
+            // 類別管理ToolStripMenuItem
+            // 
+            this.類別管理ToolStripMenuItem.Name = "類別管理ToolStripMenuItem";
+            this.類別管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.類別管理ToolStripMenuItem.Text = "類別管理";
+            this.類別管理ToolStripMenuItem.Click += new System.EventHandler(this.類別管理ToolStripMenuItem_Click);
             // 
             // 返回ToolStripMenuItem
             // 
@@ -154,18 +161,11 @@ namespace MiddleProject
             // 
             this.contentPanel.BackColor = System.Drawing.Color.Transparent;
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentPanel.Location = new System.Drawing.Point(0, 30);
+            this.contentPanel.Location = new System.Drawing.Point(0, 28);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(790, 443);
+            this.contentPanel.Size = new System.Drawing.Size(790, 445);
             this.contentPanel.TabIndex = 1;
-            // 
-            // 類別管理ToolStripMenuItem
-            // 
-            this.類別管理ToolStripMenuItem.Name = "類別管理ToolStripMenuItem";
-            this.類別管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.類別管理ToolStripMenuItem.Text = "類別管理";
-            this.類別管理ToolStripMenuItem.Click += new System.EventHandler(this.類別管理ToolStripMenuItem_Click);
             // 
             // ManagePage
             // 

@@ -17,7 +17,7 @@ namespace MiddleProject
             var d = new DBProduceStr();
             d.ProduceConnectStr();           
             new Initialization(); // 初始化
-            Application.Run(new FrontSide());
+            Application.Run(new ManagePage());
         }
     }
 }
