@@ -26,6 +26,8 @@ namespace MiddleProject.Panel
 
             Ingredients = Model.GolbalVar.db.Queryable<Model.Ingredients>().ToList();
 
+            IngredientPanel1.Controls.Clear();
+
             foreach (var item in Ingredients)
             {
                 CheckBox cb = new CheckBox();

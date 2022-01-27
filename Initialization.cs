@@ -13,7 +13,10 @@ namespace MiddleProject
 
         void getFood()
         {
+
             var productDict = Model.GolbalVar.productDictionary;
+            productDict.Clear();
+
             string sql = "SELECT * FROM products";
             SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();

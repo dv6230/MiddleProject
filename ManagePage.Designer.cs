@@ -59,7 +59,7 @@ namespace MiddleProject
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(790, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(790, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +70,7 @@ namespace MiddleProject
             this.單一訂單查詢ToolStripMenuItem,
             this.銷售統計ToolStripMenuItem});
             this.訂單ToolStripMenuItem.Name = "訂單ToolStripMenuItem";
-            this.訂單ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.訂單ToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
             this.訂單ToolStripMenuItem.Text = "訂單";
             // 
             // 訂單查詢ToolStripMenuItem
@@ -95,13 +95,13 @@ namespace MiddleProject
             // 員工ToolStripMenuItem
             // 
             this.員工ToolStripMenuItem.Name = "員工ToolStripMenuItem";
-            this.員工ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.員工ToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
             this.員工ToolStripMenuItem.Text = "員工";
             // 
             // 會員ToolStripMenuItem
             // 
             this.會員ToolStripMenuItem.Name = "會員ToolStripMenuItem";
-            this.會員ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.會員ToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
             this.會員ToolStripMenuItem.Text = "會員";
             // 
             // 商品ToolStripMenuItem
@@ -113,7 +113,7 @@ namespace MiddleProject
             this.配料管理ToolStripMenuItem,
             this.類別管理ToolStripMenuItem});
             this.商品ToolStripMenuItem.Name = "商品ToolStripMenuItem";
-            this.商品ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.商品ToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
             this.商品ToolStripMenuItem.Text = "商品";
             // 
             // 新增商品ToolStripMenuItem
@@ -153,7 +153,7 @@ namespace MiddleProject
             // 返回ToolStripMenuItem
             // 
             this.返回ToolStripMenuItem.Name = "返回ToolStripMenuItem";
-            this.返回ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.返回ToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
             this.返回ToolStripMenuItem.Text = "返回";
             this.返回ToolStripMenuItem.Click += new System.EventHandler(this.返回ToolStripMenuItem_Click);
             // 
@@ -161,10 +161,10 @@ namespace MiddleProject
             // 
             this.contentPanel.BackColor = System.Drawing.Color.Transparent;
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentPanel.Location = new System.Drawing.Point(0, 28);
+            this.contentPanel.Location = new System.Drawing.Point(0, 27);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(790, 445);
+            this.contentPanel.Size = new System.Drawing.Size(790, 446);
             this.contentPanel.TabIndex = 1;
             // 
             // ManagePage
@@ -178,6 +178,7 @@ namespace MiddleProject
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManagePage";
             this.Text = "ManagePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManagePage_FormClosed);
             this.Load += new System.EventHandler(this.ManagePage_Load);
             this.SizeChanged += new System.EventHandler(this.ManagePage_SizeChanged);
             this.menuStrip1.ResumeLayout(false);

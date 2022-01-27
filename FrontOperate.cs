@@ -134,8 +134,9 @@ namespace MiddleProject
         {
             // this.Hide();
             var manage = new ManagePage();
-            //manage.Closed += (s, args) => this.Close();
-            manage.Show();
+            // manage.Closed += (s, args) => this.ReFreshProduct();
+            manage.SetFrontSide(this);
+            manage.ShowDialog();
         }
 
         private void btnAddMember_Click(object sender, EventArgs e)
@@ -270,5 +271,39 @@ namespace MiddleProject
         {
             new Checkout(); 
         }
+
+        public void ReFreshProduct()
+        {
+            var productList = Model.GolbalVar.productDictionary;
+
+            tabControl1.Controls.Clear();
+            foreach (KeyValuePair<string, List<Model.Product>> item in productList)
+            {
+                TabPage tpg = new TabPage();
+                tpg.Location = new System.Drawing.Point(4, 25);
+                tpg.Name = item.Key;
+                tpg.Padding = new System.Windows.Forms.Padding(3);
+                tpg.Size = new System.Drawing.Size(192, 71);
+                tpg.TabIndex = 0;
+                tpg.Text = item.Key;
+                tpg.UseVisualStyleBackColor = true;
+                tpg.SizeChanged += Tpg_SizeChanged;
+                tabControl1.Controls.Add(tpg);
+
+                FlowLayoutPanel f = new FlowLayoutPanel();
+                f.Size = tpg.Size;
+                foreach (Model.Product item2 in item.Value)
+                {
+                    Button b = new Button();
+                    b.Text = item2.Name;
+                    b.Tag = item2;
+                    b.Click += productDetail;
+                    f.Controls.Add(b);
+                }
+
+                tpg.Controls.Add(f);
+            }
+        }
+
     }
 }

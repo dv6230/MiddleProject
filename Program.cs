@@ -15,10 +15,10 @@ namespace MiddleProject
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new ManagePage());
             var d = new DBProduceStr();
-            // d.ProduceConnectStr();           
-            d.ProduceConnectStr2(); 
+            d.ProduceConnectStr();           
+            //d.ProduceConnectStr2(); 
             new Initialization(); // 初始化
-            Application.Run(new ManagePage());
+            Application.Run(new Login());
         }
     }
 }
