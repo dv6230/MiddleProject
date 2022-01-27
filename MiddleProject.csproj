@@ -93,11 +93,37 @@
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\ProductIngredient.cs" />
+    <Compile Include="Model\Products.cs" />
+    <Compile Include="Model\ProductType.cs" />
     <Compile Include="Panel\AddCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Panel\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\AddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\IngredientAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\IngredientAdd.Designer.cs">
+      <DependentUpon>IngredientAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\IngredientManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\IngredientManage.Designer.cs">
+      <DependentUpon>IngredientManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\ProductType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\ProductType.Designer.cs">
+      <DependentUpon>ProductType.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +150,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\IngredientAdd.resx">
+      <DependentUpon>IngredientAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\IngredientManage.resx">
+      <DependentUpon>IngredientManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\ProductType.resx">
+      <DependentUpon>ProductType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -171,6 +209,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBaseStruct\SQLQuery.sql" />
+    <Content Include="MidProject.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MidProject_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MidProject.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\photo1.jpg" />
   </ItemGroup>
   <ItemGroup>

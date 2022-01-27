@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace MiddleProject.Model
 {
-    internal class Ingredients
+    internal class Products
     {
         [SqlSugar.SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
-        public string name { get; set; }
-        public int price { get; set; }
-
-        public override string ToString()
-        {
-            return this.name;
-        }
+        public string Name { get; set; }
+        public string Price { get; set; }   
+        public string Note { get; set; }
+        public int ProductTypeId { get; set; }
     }
 }

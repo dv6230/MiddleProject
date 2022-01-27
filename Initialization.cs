@@ -51,8 +51,19 @@ namespace MiddleProject
                         Select((prod, ingredient) =>
                         new { id = ingredient.Id, name = ingredient.name, price = ingredient.price }
                     ).ToList();
-                System.Console.WriteLine(query);
 
+
+                if (query.Count > 0)
+                {
+                    foreach (var item in query)
+                    {
+                        var ingredient = new Model.Ingredients();
+                        ingredient.name = item.name;
+                        ingredient.price = item.price;   
+                        product.ingredient.Add(ingredient);
+                    }
+                }
+                
                 // product.ingredient = new List<Model.ProductIngredient>(ingredients);
 
                 if (productDict.ContainsKey(productType))

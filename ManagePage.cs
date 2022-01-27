@@ -33,5 +33,37 @@ namespace MiddleProject
         {
             this.Dispose();
         }
+
+        private void 新增配料ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.IngredientAdd();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 配料管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.IngredientManage();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 新增商品ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.AddProduct();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 類別管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.ProductTypePanel();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
     }
 }
