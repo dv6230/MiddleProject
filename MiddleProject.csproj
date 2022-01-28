@@ -218,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBaseStruct\SQLQuery.sql" />
+    <Content Include="MidProject.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MidProject_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\photo1.jpg" />
   </ItemGroup>
   <ItemGroup>
