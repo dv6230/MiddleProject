@@ -62,7 +62,6 @@ namespace MiddleProject
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CountSelect)).BeginInit();
@@ -75,7 +74,6 @@ namespace MiddleProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.btnCloseSystem);
             this.panel1.Controls.Add(this.SlideBackEndBtn);
@@ -488,25 +486,6 @@ namespace MiddleProject
             this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 361);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 328);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "guna2Button1";
-            // 
             // FrontSide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -567,6 +546,5 @@ namespace MiddleProject
         private System.Windows.Forms.NumericUpDown CountSelect;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCheck;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
