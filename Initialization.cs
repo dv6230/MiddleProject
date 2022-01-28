@@ -50,7 +50,7 @@ namespace MiddleProject
                 var query = Model.GolbalVar.db.Queryable<Model.ProductIngredient>()
                     .InnerJoin<Model.Ingredients>((prod, ingredient) => prod.ingredientId == ingredient.Id)
                     .Where(
-                        prod => prod.Id == (int)reader["id"]).
+                        prod => prod.productId == (int)reader["id"]).
                         Select((prod, ingredient) =>
                         new { id = ingredient.Id, name = ingredient.name, price = ingredient.price }
                     ).ToList();

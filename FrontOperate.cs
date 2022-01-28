@@ -30,36 +30,8 @@ namespace MiddleProject
         {
             slideOrderBtn.BackColor = activeColor;
 
-            var productList = Model.GolbalVar.productDictionary;
-
-            tabControl1.Controls.Clear();
-            foreach (KeyValuePair<string, List<Model.Product>> item in productList)
-            {
-                TabPage tpg = new TabPage();
-                tpg.Location = new System.Drawing.Point(4, 25);
-                tpg.Name = item.Key;
-                tpg.Padding = new System.Windows.Forms.Padding(3);
-                tpg.Size = new System.Drawing.Size(192, 71);
-                tpg.TabIndex = 0;
-                tpg.Text = item.Key;
-                tpg.UseVisualStyleBackColor = true;
-                tpg.SizeChanged += Tpg_SizeChanged;
-                tabControl1.Controls.Add(tpg);
-
-                FlowLayoutPanel f = new FlowLayoutPanel();
-                f.Size = tpg.Size;
-                foreach (Model.Product item2 in item.Value)
-                {
-                    Button b = new Button();
-                    b.Text = item2.Name;
-                    b.Tag = item2;
-                    b.Click += productDetail;
-                    f.Controls.Add(b);
-                }
-
-                tpg.Controls.Add(f);
-            }
-
+            ReFreshProduct();
+        
             panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth + 5, this.Height);
             panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
@@ -84,7 +56,7 @@ namespace MiddleProject
                 cb.AutoSize = true;
                 cb.TextAlign = ContentAlignment.MiddleCenter;
                 cb.Padding = new Padding(4);
-                cb.Tag = item; 
+                cb.Tag = item;
                 cb.CheckedChanged += Cb_CheckedChanged;
                 ingredientPanel.Controls.Add(cb);
             }
@@ -93,7 +65,7 @@ namespace MiddleProject
         private void Cb_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb = (CheckBox)sender;
-            Model.Ingredients tg = (Model.Ingredients)cb.Tag; 
+            Model.Ingredients tg = (Model.Ingredients)cb.Tag;
             if (cb.Checked)
             {
                 selectItem.Add(tg);
@@ -184,7 +156,7 @@ namespace MiddleProject
 
             p.Count = count;
             p.TotalPrice = count * p.Price;
-            p.UserSelectIngredient = new List<Model.Ingredients>(selectItem) ; 
+            p.UserSelectIngredient = new List<Model.Ingredients>(selectItem);
 
             if (radioSweet1.Checked) p.Sweet = "正常";
             else if (radioSweet2.Checked) p.Sweet = "7分糖";
@@ -269,7 +241,7 @@ namespace MiddleProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Checkout(); 
+            new Checkout();
         }
 
         public void ReFreshProduct()
@@ -297,6 +269,9 @@ namespace MiddleProject
                     Button b = new Button();
                     b.Text = item2.Name;
                     b.Tag = item2;
+                    // b.Padding = new Padding(10);
+                    b.AutoSize = false;
+                    b.Size = new Size(75, 45);
                     b.Click += productDetail;
                     f.Controls.Add(b);
                 }
@@ -305,5 +280,9 @@ namespace MiddleProject
             }
         }
 
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

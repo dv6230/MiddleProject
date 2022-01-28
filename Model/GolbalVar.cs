@@ -7,6 +7,7 @@ namespace MiddleProject.Model
     {
         static public int auth = 0;
         static public int userId = 0;
+        static public string userName = "";
         
         static public List<Product> purchaseList = new List<Product>();
         static public List<string> ingredientList = new List<string>();
