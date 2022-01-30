@@ -108,7 +108,7 @@ namespace MiddleProject
             var manage = new ManagePage();
             // manage.Closed += (s, args) => this.ReFreshProduct();
             manage.SetFrontSide(this);
-            manage.ShowDialog();
+            manage.Show();
         }
 
         private void btnAddMember_Click(object sender, EventArgs e)
@@ -282,7 +282,8 @@ namespace MiddleProject
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-
+            CheckOutForm form = new CheckOutForm();
+            form.ShowDialog();
         }
     }
 }

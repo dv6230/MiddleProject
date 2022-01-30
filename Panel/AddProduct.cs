@@ -17,7 +17,15 @@ namespace MiddleProject.Panel
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-            fillCheck();
+            try
+            {
+                fillCheck();
+            }
+            catch
+            {
+
+            }
+            
         }
 
         void fillCheck()

@@ -29,7 +29,7 @@ namespace MiddleProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();            
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tBoxAccount = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@ namespace MiddleProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(889, 568);
             this.panel1.TabIndex = 6;
-            
             // 
             // label1
             // 
