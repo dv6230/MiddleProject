@@ -63,7 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checkout.cs" />
     <Compile Include="CheckOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
