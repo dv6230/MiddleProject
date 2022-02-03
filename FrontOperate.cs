@@ -31,7 +31,7 @@ namespace MiddleProject
             slideOrderBtn.BackColor = activeColor;
 
             ReFreshProduct();
-        
+
             panel4.Size = new Size(new Panel.UserPurchaseItem().Width + padwidth + 5, this.Height);
             panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
@@ -169,11 +169,11 @@ namespace MiddleProject
                 return;
             }
 
-            if (radioTemp1.Checked) p.Sweet = "正常";
-            else if (radioTemp2.Checked) p.Sweet = "少冰";
-            else if (radioTemp3.Checked) p.Sweet = "微冰";
-            else if (radioTemp4.Checked) p.Sweet = "去冰";
-            else if (radioTemp5.Checked) p.Sweet = "常溫";
+            if (radioTemp1.Checked) p.Temperature = "正常";
+            else if (radioTemp2.Checked) p.Temperature = "少冰";
+            else if (radioTemp3.Checked) p.Temperature = "微冰";
+            else if (radioTemp4.Checked) p.Temperature = "去冰";
+            else if (radioTemp5.Checked) p.Temperature = "常溫";
             else
             {
                 MessageBox.Show("請選擇冰塊");
@@ -235,6 +235,7 @@ namespace MiddleProject
             itemNameLabel.Text = "";
             itemPriceLabel.Text = "";
 
+            ingredientPanel.Controls.Clear();
             selectItem.Clear();
 
         }
@@ -283,7 +284,23 @@ namespace MiddleProject
         private void btnCheck_Click(object sender, EventArgs e)
         {
             CheckOutForm form = new CheckOutForm();
+            int pirce = 0;
+            foreach (var item in Model.GolbalVar.purchaseList)
+            {
+                pirce += item.TotalPrice; 
+            }
+            form.refreshPanel = CleanAll ; 
+            form.price = pirce ;
             form.ShowDialog();
+        }
+
+
+        void CleanAll()
+        {
+            Model.GolbalVar.purchaseList.Clear();
+            defaultSelect();
+            panel4.Controls.Clear();
+            product1 = new Model.Product(); 
         }
     }
 }

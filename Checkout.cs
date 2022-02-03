@@ -7,7 +7,7 @@ namespace MiddleProject
         public Checkout()
         {
 
-            Model.Orders order = new Model.Orders(70);
+            Model.Orders order = new Model.Orders();
 
             int orderId =  Model.GolbalVar.db.Insertable(order).ExecuteReturnIdentity();
 

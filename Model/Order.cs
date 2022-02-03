@@ -11,7 +11,9 @@ namespace MiddleProject.Model
         public DateTime orderDateTime { get; set; }
         public int employeeId { get; set; }
 
-        public Orders() { }
+        public Orders() {
+            orderDateTime = DateTime.Now;
+        }
 
         public Orders(int amount)
         {

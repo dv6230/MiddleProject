@@ -15,16 +15,9 @@ namespace MiddleProject
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new ManagePage());
             var d = new DBProduceStr();
-            //d.ProduceConnectStr();
-            d.ProduceConnectStr2(); 
-            try
-            {
-                new Initialization(); // 初始化 1234578
-            }
-            catch
-            {
-
-            }
+            d.ProduceConnectStr();
+            //d.ProduceConnectStr2(); 
+            new Initialization();
             Application.Run(new FrontSide());
         }
     }
