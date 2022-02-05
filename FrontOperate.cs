@@ -280,13 +280,12 @@ namespace MiddleProject
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            CheckOutForm form = new CheckOutForm();
+            CheckOutForm form = new CheckOutForm(CleanAll);
             int pirce = 0;
             foreach (var item in Model.GolbalVar.purchaseList)
             {
                 pirce += item.TotalPrice; 
             }
-            form.refreshPanel = CleanAll ; 
             form.price = pirce ;
             form.ShowDialog();
         }

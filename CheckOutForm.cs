@@ -12,9 +12,11 @@ namespace MiddleProject
         public int price = 0;
         public delegate void ReFreshPanel();
         public ReFreshPanel refreshPanel;
+        Model.Customer customer = null;
 
-        public CheckOutForm()
+        public CheckOutForm(ReFreshPanel r)
         {
+            this.refreshPanel = r;
             InitializeComponent();
         }
 
@@ -36,6 +38,7 @@ namespace MiddleProject
             {
                 lblCName.Text = reader["name"].ToString();
                 customerId = (int)reader["id"];
+                this.customer = Model.GolbalVar.db.Queryable<Model.Customer>().First(it => it.Id == customerId);
             }
             reader.Close();
             con.Close();
@@ -77,6 +80,14 @@ namespace MiddleProject
             }
 
             if (refreshPanel != null) refreshPanel();
+
+            if (customerId != 0 && this.customer != null)
+            {
+                // 十元累計一點
+                this.customer.point = this.customer.point + (int)(odr.amount / 10);
+                Model.GolbalVar.db.Updateable(this.customer).ExecuteCommand();
+            }
+
             this.Dispose();
         }
 
