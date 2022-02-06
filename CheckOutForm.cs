@@ -42,7 +42,8 @@ namespace MiddleProject
                 lblPoint.Text = reader["point"].ToString();
                 customerId = (int)reader["id"];
                 this.customer = Model.GolbalVar.db.Queryable<Model.Customer>().First(it => it.Id == customerId);
-            }else
+            }
+            else
             {
                 MessageBox.Show("查無此人");
             }
@@ -63,7 +64,7 @@ namespace MiddleProject
         private void btnCheckout_Click(object sender, EventArgs e)
         {
 
-            if (Model.GolbalVar.purchaseList.Count <= 0 )
+            if (Model.GolbalVar.purchaseList.Count <= 0)
             {
                 MessageBox.Show("無產品");
                 return;

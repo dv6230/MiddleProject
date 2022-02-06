@@ -9,7 +9,7 @@ namespace MiddleProject.Panel
     {
 
         List<Model.Ingredients> selectIngredient = new List<Model.Ingredients>();
-        List<Model.ProductType> typeList = new List<Model.ProductType>();   
+        List<Model.ProductType> typeList = new List<Model.ProductType>();
         public AddProduct()
         {
             InitializeComponent();
@@ -17,15 +17,9 @@ namespace MiddleProject.Panel
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-            try
-            {
-                fillCheck();
-            }
-            catch
-            {
+            try { fillCheck(); }
+            catch { }
 
-            }
-            
         }
 
         void fillCheck()
@@ -67,17 +61,17 @@ namespace MiddleProject.Panel
             else
             {
                 selectIngredient.Remove(ig);
-            }           
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex <= -1 )
+            if (comboBox1.SelectedIndex <= -1)
             {
                 MessageBox.Show("請選擇類別");
                 return;
             }
-            Model.Products p  = new Model.Products();
+            Model.Products p = new Model.Products();
             p.Name = tBoxname.Text;
             try
             {
@@ -85,15 +79,15 @@ namespace MiddleProject.Panel
             }
             catch (Exception)
             {
-                p.Price = 0 ;
+                p.Price = 0;
             }
-            
+
             p.ProductTypeId = typeList[comboBox1.SelectedIndex].Id;
             int i = Model.GolbalVar.db.Insertable(p).ExecuteReturnIdentity();
             foreach (var item in selectIngredient)
             {
                 var productIngredient = new Model.ProductIngredient();
-                productIngredient.productId = i ;
+                productIngredient.productId = i;
                 productIngredient.ingredientId = item.Id;
                 Model.GolbalVar.db.Insertable(productIngredient).ExecuteCommand();
             }
