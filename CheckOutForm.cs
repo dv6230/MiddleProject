@@ -63,6 +63,12 @@ namespace MiddleProject
         private void btnCheckout_Click(object sender, EventArgs e)
         {
 
+            if (Model.GolbalVar.purchaseList.Count <= 0 )
+            {
+                MessageBox.Show("無產品");
+                return;
+            }
+
             Model.Orders odr = new Model.Orders();
 
             odr.customerId = customerId;

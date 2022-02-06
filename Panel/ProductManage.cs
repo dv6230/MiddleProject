@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MiddleProject.Panel
@@ -14,11 +15,11 @@ namespace MiddleProject.Panel
         List<Model.Products> productList = new List<Model.Products>();
 
         Model.Products product = new Model.Products();
-
+        List<Model.ProductType> typeList = new List<Model.ProductType>();
 
         private void ProductManage_Load(object sender, EventArgs e)
         {
-            loadpage(); 
+            loadpage();
         }
 
         void loadpage()
@@ -26,6 +27,7 @@ namespace MiddleProject.Panel
 
             productList.Clear();
             listBox1.Items.Clear();
+            comboBox1.Items.Clear();
 
             productList = Model.GolbalVar.db.Queryable<Model.Products>().ToList();
 
@@ -33,6 +35,13 @@ namespace MiddleProject.Panel
             {
                 listBox1.Items.Add(item.Name);
             }
+
+            typeList = Model.GolbalVar.db.Queryable<Model.ProductType>().ToList();
+            foreach (var item in typeList)
+            {
+                comboBox1.Items.Add(item.Name);
+            }
+            comboBox1.SelectedIndex = -1;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,21 +55,52 @@ namespace MiddleProject.Panel
             tBoxPrice.Text = productList[listBox1.SelectedIndex].Price.ToString();
             product = productList[listBox1.SelectedIndex];
 
+            var result = Enumerable.Range(0, typeList.Count)
+               .Where(i => typeList[i].Id == product.ProductTypeId)
+               .ToList();
+
+            if (result.Count > 0)
+            {
+                comboBox1.SelectedIndex = result[0];
+            }
+            else
+            {
+                comboBox1.SelectedIndex = -1;
+            }
+
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-            product.Name = tBoxName.Text;
-            product.Price = int.Parse(tBoxPrice.Text.ToString());
-            Model.GolbalVar.db.Updateable(this.product).ExecuteCommand();
-            int index = listBox1.SelectedIndex; 
-            loadpage();
-            listBox1.SelectedIndex = index; 
-        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             loadpage();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (product.Id == null || product.Id == 0)
+            {
+                return;
+            }
+
+            product.Name = tBoxName.Text;
+            product.Price = int.Parse(tBoxPrice.Text.ToString());
+            product.ProductTypeId = typeList[comboBox1.SelectedIndex].Id;
+            Model.GolbalVar.db.Updateable(this.product).ExecuteCommand();
+            int index = listBox1.SelectedIndex;
+            loadpage();
+            listBox1.SelectedIndex = index;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Model.GolbalVar.db.Deleteable<Model.Products>().Where(new Model.Products() { Id = product.Id }).ExecuteCommand();
+            loadpage();
+            listBox1.SelectedIndex = -1;
+            comboBox1.SelectedIndex = -1;
+            tBoxName.Text = "";
+            tBoxPrice.Text = "";
+            product = new Model.Products();
         }
     }
 }

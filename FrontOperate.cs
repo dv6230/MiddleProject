@@ -269,7 +269,7 @@ namespace MiddleProject
                     b.Tag = item2;
                     // b.Padding = new Padding(10);
                     b.AutoSize = false;
-                    b.Size = new Size(75, 45);
+                    b.Size = new Size(120, 45);
                     b.Click += productDetail;
                     f.Controls.Add(b);
                 }
