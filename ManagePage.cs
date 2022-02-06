@@ -5,6 +5,9 @@ namespace MiddleProject
 {
     public partial class ManagePage : Form
     {
+
+        public FrontSide frontSide { get; set; }
+
         public ManagePage()
         {
             InitializeComponent();
@@ -12,7 +15,7 @@ namespace MiddleProject
 
         private void ManagePage_Load(object sender, EventArgs e)
         {
-            var a = menuStrip1.Items;            
+            var a = menuStrip1.Items;
         }
 
         private void ManagePage_SizeChanged(object sender, EventArgs e)
@@ -65,11 +68,7 @@ namespace MiddleProject
             contentPanel.Controls.Add(p);
         }
 
-        FrontSide frontSide = new FrontSide();
-        public void SetFrontSide(FrontSide fs)
-        {
-            this.frontSide = fs;
-        }
+
 
         private void ManagePage_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -78,6 +77,14 @@ namespace MiddleProject
                 new Initialization();
                 frontSide.ReFreshProduct();
             }
+        }
+
+        private void 管理商品ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.ProductManage();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
         }
     }
 }

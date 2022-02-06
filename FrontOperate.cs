@@ -107,7 +107,7 @@ namespace MiddleProject
             // this.Hide();
             var manage = new ManagePage();
             // manage.Closed += (s, args) => this.ReFreshProduct();
-            manage.SetFrontSide(this);
+            manage.frontSide = this;
             manage.Show();
         }
 
@@ -240,7 +240,7 @@ namespace MiddleProject
 
         }
 
-        
+
 
         public void ReFreshProduct()
         {
@@ -284,9 +284,9 @@ namespace MiddleProject
             int pirce = 0;
             foreach (var item in Model.GolbalVar.purchaseList)
             {
-                pirce += item.TotalPrice; 
+                pirce += item.TotalPrice;
             }
-            form.price = pirce ;
+            form.price = pirce;
             form.ShowDialog();
         }
 
@@ -296,7 +296,7 @@ namespace MiddleProject
             Model.GolbalVar.purchaseList.Clear();
             defaultSelect();
             panel4.Controls.Clear();
-            product1 = new Model.Product(); 
+            product1 = new Model.Product();
         }
     }
 }

@@ -39,12 +39,13 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("新細明體", 14F);
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
+            this.listBox1.ItemHeight = 28;
             this.listBox1.Location = new System.Drawing.Point(101, 79);
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(238, 328);
+            this.listBox1.Size = new System.Drawing.Size(238, 312);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 

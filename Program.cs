@@ -18,7 +18,7 @@ namespace MiddleProject
             d.ProduceConnectStr();
             //d.ProduceConnectStr2(); 
             new Initialization();
-            Application.Run(new ManagePage());
+            Application.Run(new FrontSide());
         }
     }
 }

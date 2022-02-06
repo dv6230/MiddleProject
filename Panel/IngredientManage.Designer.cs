@@ -40,9 +40,9 @@
             // 
             // listBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.listBox1.Font = new System.Drawing.Font("新細明體", 14F);
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 24;
+            this.listBox1.ItemHeight = 28;
             this.listBox1.Location = new System.Drawing.Point(120, 96);
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
