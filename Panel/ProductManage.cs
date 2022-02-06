@@ -102,9 +102,10 @@ namespace MiddleProject.Panel
             foreach (var item2 in checkBoxList) item2.Checked = false;
 
 
-            foreach (var item in product.ProductIngredientList)
+            foreach (var item in product.ProductIngredientList.ToArray())
             {
-                foreach (var item2 in checkBoxList)
+                Console.WriteLine(item.ingredientId);
+                foreach (var item2 in checkBoxList.ToArray())
                 {
                     var a = (Model.Ingredients)item2.Tag;
                     if (a.Id == item.ingredientId)
