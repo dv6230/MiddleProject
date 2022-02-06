@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MiddleProject.Panel
@@ -25,9 +20,9 @@ namespace MiddleProject.Panel
 
         void sizeChange()
         {
-            
-            dataGridView1.Location = new Point(25,65); 
-            dataGridView1.Size = new Size((int)(this.Width - 25 * 2 ), (int)((panel3.Height - 65) * 0.9));
+
+            dataGridView1.Location = new Point(25, 65);
+            dataGridView1.Size = new Size((int)(this.Width - 25 * 2), (int)((panel3.Height - 65) * 0.9));
         }
 
         private void UserControl1_SizeChanged(object sender, EventArgs e)
@@ -39,18 +34,22 @@ namespace MiddleProject.Panel
         {
             SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();
-            string strSQL = "select * from orders Where (orderDateTime >= @StartDate AND orderDateTime <= @EndDate );";
+            string strSQL = "select id as 訂單編號 , customerId as 顧客編號 , amount as 訂單金額 , orderDateTime as 訂單日期 " +
+                " from orders Where (orderDateTime >= @StartDate AND orderDateTime <= @EndDate );";
             SqlCommand cmd = new SqlCommand(strSQL, con);
             cmd.Parameters.AddWithValue("@StartDate", startTimePicker.Value);
             cmd.Parameters.AddWithValue("@EndDate", endTimePicker.Value);
             SqlDataReader reader = cmd.ExecuteReader();
-            Console.WriteLine(cmd.CommandText);
-            
+
             if (reader.HasRows)
             {
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                 dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].Width = 150;
+                dataGridView1.Columns[1].Width = 150;
+                dataGridView1.Columns[2].Width = 150;
+                dataGridView1.Columns[3].Width = 150;
             }
             else
             {

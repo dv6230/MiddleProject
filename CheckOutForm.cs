@@ -27,6 +27,8 @@ namespace MiddleProject
 
         void searchCustomer()
         {
+            lblCName.Text = "";
+            lblPoint.Text = "";
             SqlConnection con = new SqlConnection(DBProduceStr.DBstr);
             con.Open();
             string sql = "SELECT * FROM customer WHERE phone = @phone";
@@ -37,8 +39,12 @@ namespace MiddleProject
             if (reader.HasRows)
             {
                 lblCName.Text = reader["name"].ToString();
+                lblPoint.Text = reader["point"].ToString();
                 customerId = (int)reader["id"];
                 this.customer = Model.GolbalVar.db.Queryable<Model.Customer>().First(it => it.Id == customerId);
+            }else
+            {
+                MessageBox.Show("查無此人");
             }
             reader.Close();
             con.Close();

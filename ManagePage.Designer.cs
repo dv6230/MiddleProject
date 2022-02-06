@@ -76,20 +76,20 @@ namespace MiddleProject
             // 訂單查詢ToolStripMenuItem
             // 
             this.訂單查詢ToolStripMenuItem.Name = "訂單查詢ToolStripMenuItem";
-            this.訂單查詢ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.訂單查詢ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.訂單查詢ToolStripMenuItem.Text = "區間訂單查詢";
             this.訂單查詢ToolStripMenuItem.Click += new System.EventHandler(this.訂單查詢ToolStripMenuItem_Click);
             // 
             // 單一訂單查詢ToolStripMenuItem
             // 
             this.單一訂單查詢ToolStripMenuItem.Name = "單一訂單查詢ToolStripMenuItem";
-            this.單一訂單查詢ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.單一訂單查詢ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.單一訂單查詢ToolStripMenuItem.Text = "單一訂單查詢";
             // 
             // 銷售統計ToolStripMenuItem
             // 
             this.銷售統計ToolStripMenuItem.Name = "銷售統計ToolStripMenuItem";
-            this.銷售統計ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.銷售統計ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.銷售統計ToolStripMenuItem.Text = "區間銷售統計";
             // 
             // 員工ToolStripMenuItem
@@ -119,34 +119,34 @@ namespace MiddleProject
             // 新增商品ToolStripMenuItem
             // 
             this.新增商品ToolStripMenuItem.Name = "新增商品ToolStripMenuItem";
-            this.新增商品ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.新增商品ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.新增商品ToolStripMenuItem.Text = "新增商品";
             this.新增商品ToolStripMenuItem.Click += new System.EventHandler(this.新增商品ToolStripMenuItem_Click);
             // 
             // 管理商品ToolStripMenuItem
             // 
             this.管理商品ToolStripMenuItem.Name = "管理商品ToolStripMenuItem";
-            this.管理商品ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.管理商品ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.管理商品ToolStripMenuItem.Text = "管理商品";
             // 
             // 新增配料ToolStripMenuItem
             // 
             this.新增配料ToolStripMenuItem.Name = "新增配料ToolStripMenuItem";
-            this.新增配料ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.新增配料ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.新增配料ToolStripMenuItem.Text = "新增配料";
             this.新增配料ToolStripMenuItem.Click += new System.EventHandler(this.新增配料ToolStripMenuItem_Click);
             // 
             // 配料管理ToolStripMenuItem
             // 
             this.配料管理ToolStripMenuItem.Name = "配料管理ToolStripMenuItem";
-            this.配料管理ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.配料管理ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.配料管理ToolStripMenuItem.Text = "配料管理";
             this.配料管理ToolStripMenuItem.Click += new System.EventHandler(this.配料管理ToolStripMenuItem_Click);
             // 
             // 類別管理ToolStripMenuItem
             // 
             this.類別管理ToolStripMenuItem.Name = "類別管理ToolStripMenuItem";
-            this.類別管理ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.類別管理ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.類別管理ToolStripMenuItem.Text = "類別管理";
             this.類別管理ToolStripMenuItem.Click += new System.EventHandler(this.類別管理ToolStripMenuItem_Click);
             // 
