@@ -18,6 +18,8 @@ namespace MiddleProject.Panel
         Model.Products product = new Model.Products();
         List<Model.ProductType> typeList = new List<Model.ProductType>();
 
+        List<CheckBox> checkBoxList = new List<CheckBox>();
+
         private void ProductManage_Load(object sender, EventArgs e)
         {
             loadpage();
@@ -29,6 +31,7 @@ namespace MiddleProject.Panel
             productList.Clear();
             listBox1.Items.Clear();
             comboBox1.Items.Clear();
+            checkBoxList.Clear();
 
             productList = Model.GolbalVar.db.Queryable<Model.Products>().ToList();
 
@@ -57,6 +60,7 @@ namespace MiddleProject.Panel
                 cb.Tag = item;
                 cb.CheckedChanged += Cb_CheckedChanged;
                 flowLayoutPanel1.Controls.Add(cb);
+                checkBoxList.Add(cb);
             }
 
         }
@@ -67,7 +71,6 @@ namespace MiddleProject.Panel
             Model.Ingredients ig = (Model.Ingredients)cb.Tag;
             if (cb.Checked)
             {
-                product.IngredientList.Add(ig);
                 product.ProductIngredientList.Add(
                     new Model.ProductIngredient()
                     { ingredientId = ig.Id, productId = this.product.Id }
@@ -89,17 +92,27 @@ namespace MiddleProject.Panel
             tBoxName.Text = productList[listBox1.SelectedIndex].Name;
             tBoxPrice.Text = productList[listBox1.SelectedIndex].Price.ToString();
             product = productList[listBox1.SelectedIndex];
-            var ls = Model.GolbalVar.db.Queryable<Model.ProductIngredient>().Where((i) => i.productId == product.Id).ToList();
-            foreach (var item in ls)
-            {
-                var a = Model.GolbalVar.db.Queryable<Model.Ingredients>().Where((i) => i.Id == item.ingredientId).ToArray();
-                product.IngredientList.Add(a[0]);
-            }
-            Console.WriteLine();
+            product.ProductIngredientList = Model.GolbalVar.db.Queryable<Model.ProductIngredient>().Where((i) => i.productId == product.Id).ToList();
 
             var result = Enumerable.Range(0, typeList.Count)
                .Where(i => typeList[i].Id == product.ProductTypeId)
                .ToList();
+
+
+            foreach (var item2 in checkBoxList) item2.Checked = false;
+
+
+            foreach (var item in product.ProductIngredientList)
+            {
+                foreach (var item2 in checkBoxList)
+                {
+                    var a = (Model.Ingredients)item2.Tag;
+                    if (a.Id == item.ingredientId)
+                    {
+                        item2.Checked = true;
+                    }
+                }
+            }
 
             if (result.Count > 0)
             {

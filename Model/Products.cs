@@ -11,7 +11,6 @@ namespace MiddleProject.Model
         public string Note { get; set; }
         public int ProductTypeId { get; set; }
 
-        public List<Ingredients> IngredientList = new List<Ingredients>();
         public List<ProductIngredient> ProductIngredientList = new List<ProductIngredient>();
     }
 }
