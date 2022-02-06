@@ -20,6 +20,8 @@ namespace MiddleProject.Panel
 
         List<CheckBox> checkBoxList = new List<CheckBox>();
 
+        bool isEditing = false;
+
         private void ProductManage_Load(object sender, EventArgs e)
         {
             loadpage();
@@ -76,14 +78,31 @@ namespace MiddleProject.Panel
                     { ingredientId = ig.Id, productId = this.product.Id }
                 );
             }
-            else
+            else if (isEditing == false)
             {
+
+                int id = 0;
+                foreach (var item in product.ProductIngredientList)
+                {
+                    if (item.ingredientId == ig.Id)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        id++;
+                    }
+                }
+                product.ProductIngredientList.RemoveAt(id);
 
             }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            this.isEditing = true;
+
             if (listBox1.SelectedIndex == -1 || listBox1.SelectedIndex >= productList.Count)
             {
                 return;
@@ -124,6 +143,8 @@ namespace MiddleProject.Panel
                 comboBox1.SelectedIndex = -1;
             }
 
+            this.isEditing = false;
+
         }
 
 
@@ -144,12 +165,21 @@ namespace MiddleProject.Panel
             product.ProductTypeId = typeList[comboBox1.SelectedIndex].Id;
             Model.GolbalVar.db.Updateable(this.product).ExecuteCommand();
             int index = listBox1.SelectedIndex;
+
+            Model.GolbalVar.db.Deleteable<Model.ProductIngredient>().Where(new Model.ProductIngredient() { productId = product.Id }).ExecuteCommand();
+
+            foreach (var item in product.ProductIngredientList)
+            {
+                Model.GolbalVar.db.Insertable(item).ExecuteCommand();
+            }
+
             loadpage();
             listBox1.SelectedIndex = index;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            Model.GolbalVar.db.Deleteable<Model.ProductIngredient>().Where(new Model.ProductIngredient() { productId = product.Id }).ExecuteCommand();
             Model.GolbalVar.db.Deleteable<Model.Products>().Where(new Model.Products() { Id = product.Id }).ExecuteCommand();
             loadpage();
             listBox1.SelectedIndex = -1;
