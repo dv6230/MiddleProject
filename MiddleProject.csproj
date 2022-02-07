@@ -100,17 +100,35 @@
     <Compile Include="Model\ProductIngredient.cs" />
     <Compile Include="Model\Products.cs" />
     <Compile Include="Model\ProductType.cs" />
+    <Compile Include="Panel\AccountPermission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\AccountPermission.Designer.cs">
+      <DependentUpon>AccountPermission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\AddCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Panel\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\AddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\AddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Panel\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\EmployeeManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\EmployeeManage.Designer.cs">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\IngredientAdd.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +142,12 @@
     <Compile Include="Panel\IngredientManage.Designer.cs">
       <DependentUpon>IngredientManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\OrderDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\ProductManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,11 +160,11 @@
     <Compile Include="Panel\ProductType.Designer.cs">
       <DependentUpon>ProductType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\UserControl1.cs">
+    <Compile Include="Panel\SearchTermOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Panel\SearchTermOrder.Designer.cs">
+      <DependentUpon>SearchTermOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\UserPurchaseItem.cs">
       <SubType>UserControl</SubType>
@@ -162,11 +186,20 @@
     <EmbeddedResource Include="ManagePage.resx">
       <DependentUpon>ManagePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel\AccountPermission.resx">
+      <DependentUpon>AccountPermission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\EmployeeManage.resx">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\IngredientAdd.resx">
       <DependentUpon>IngredientAdd.cs</DependentUpon>
@@ -174,14 +207,17 @@
     <EmbeddedResource Include="Panel\IngredientManage.resx">
       <DependentUpon>IngredientManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel\OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel\ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\ProductType.resx">
       <DependentUpon>ProductType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Panel\SearchTermOrder.resx">
+      <DependentUpon>SearchTermOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\UserPurchaseItem.resx">
       <DependentUpon>UserPurchaseItem.cs</DependentUpon>
@@ -226,12 +262,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBaseStruct\SQLQuery.sql" />
-    <Content Include="MidProject.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MidProject_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\photo1.jpg" />
   </ItemGroup>
   <ItemGroup>

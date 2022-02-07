@@ -24,9 +24,14 @@ namespace MiddleProject.Model
             DbType = DbType.SqlServer,
             IsAutoCloseConnection = true,
             LanguageType = LanguageType.English             
-        }); 
+        });
 
-    }
+        static public List<string> permissionList = new List<string>()
+        {
+            "後台", "訂單", "員工" , "會員" , "商品" , "新增會員"
+        };
+
+}
 
 
 

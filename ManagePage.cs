@@ -86,5 +86,37 @@ namespace MiddleProject
             p.Dock = DockStyle.Fill;
             contentPanel.Controls.Add(p);
         }
+
+        private void 單一訂單查詢ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.OrderDetail();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 新增員工ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.AddEmployee();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 員工管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.EmployeeManage();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 權限管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.AccountPermission();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
     }
 }

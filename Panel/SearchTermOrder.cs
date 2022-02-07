@@ -37,9 +37,13 @@ namespace MiddleProject.Panel
             string strSQL = "select id as 訂單編號 , customerId as 顧客編號 , amount as 訂單金額 , orderDateTime as 訂單日期 " +
                 " from orders Where (orderDateTime >= @StartDate AND orderDateTime <= @EndDate );";
             SqlCommand cmd = new SqlCommand(strSQL, con);
-            cmd.Parameters.AddWithValue("@StartDate", startTimePicker.Value);
-            cmd.Parameters.AddWithValue("@EndDate", endTimePicker.Value);
+            string sDate = startTimePicker.Value.ToString("yyyy/MM/dd");
+            string eDate = endTimePicker.Value.ToString("yyyy/MM/dd");
+            cmd.Parameters.AddWithValue("@StartDate", sDate);
+            cmd.Parameters.AddWithValue("@EndDate", eDate);
             SqlDataReader reader = cmd.ExecuteReader();
+
+            //int totalCount = 0; 
 
             if (reader.HasRows)
             {
@@ -50,13 +54,19 @@ namespace MiddleProject.Panel
                 dataGridView1.Columns[1].Width = 150;
                 dataGridView1.Columns[2].Width = 150;
                 dataGridView1.Columns[3].Width = 150;
+                //totalCount += int.Parse(reader["amount"].ToString());
             }
             else
             {
-                Console.WriteLine("no row");
+                MessageBox.Show("無訂單");
             }
             reader.Close();
             con.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

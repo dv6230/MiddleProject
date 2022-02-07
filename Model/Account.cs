@@ -17,9 +17,9 @@ namespace MiddleProject.Model
         public override string ToString()
         {
             string s = "";
-            s += Id + " / ";
-            s += account + " / ";
-            s += password + " / ";
+            //s += Id + " / ";
+            //s += account + " / ";
+            //s += password + " / ";
             s += name;
             return s;
         }

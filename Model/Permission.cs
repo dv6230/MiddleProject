@@ -6,5 +6,10 @@
         public int Id { get; set; }
         public int accountId { get; set; }
         public string permitName { get; set; }
+
+        public override string ToString()
+        {
+            return this.permitName;
+        }
     }
 }

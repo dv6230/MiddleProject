@@ -71,7 +71,7 @@ namespace MiddleProject.Panel
         {
             CheckBox cb = (CheckBox)sender;
             Model.Ingredients ig = (Model.Ingredients)cb.Tag;
-            if (cb.Checked)
+            if (cb.Checked && isEditing == false)
             {
                 product.ProductIngredientList.Add(
                     new Model.ProductIngredient()
@@ -123,7 +123,6 @@ namespace MiddleProject.Panel
 
             foreach (var item in product.ProductIngredientList.ToArray())
             {
-                Console.WriteLine(item.ingredientId);
                 foreach (var item2 in checkBoxList.ToArray())
                 {
                     var a = (Model.Ingredients)item2.Tag;
@@ -166,11 +165,11 @@ namespace MiddleProject.Panel
             Model.GolbalVar.db.Updateable(this.product).ExecuteCommand();
             int index = listBox1.SelectedIndex;
 
-            Model.GolbalVar.db.Deleteable<Model.ProductIngredient>().Where(new Model.ProductIngredient() { productId = product.Id }).ExecuteCommand();
-
+            Model.GolbalVar.db.Deleteable<Model.ProductIngredient>().Where(it => it.productId == product.Id).ExecuteCommand();
+            
             foreach (var item in product.ProductIngredientList)
             {
-                Model.GolbalVar.db.Insertable(item).ExecuteCommand();
+                Model.GolbalVar.db.Insertable(item).ExecuteCommand();                
             }
 
             loadpage();
