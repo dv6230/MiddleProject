@@ -151,5 +151,10 @@ namespace MiddleProject
             p.method = customerPage;
             contentPanel.Controls.Add(p);
         }
+
+        private void 銷售統計ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
