@@ -154,7 +154,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 31);
             this.label4.TabIndex = 21;
-            this.label4.Text = "產品配料";
+            this.label4.Text = "產品分類";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ProductManage
