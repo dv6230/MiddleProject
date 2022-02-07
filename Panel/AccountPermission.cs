@@ -38,6 +38,7 @@ namespace MiddleProject.Panel
 
             if (comboBox1.SelectedIndex == -1)
             {
+                MessageBox.Show("請選擇用戶");
                 return;
             }
 

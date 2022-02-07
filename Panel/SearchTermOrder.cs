@@ -43,8 +43,6 @@ namespace MiddleProject.Panel
             cmd.Parameters.AddWithValue("@EndDate", eDate);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            //int totalCount = 0; 
-
             if (reader.HasRows)
             {
                 DataTable dt = new DataTable();
@@ -53,13 +51,13 @@ namespace MiddleProject.Panel
                 dataGridView1.Columns[0].Width = 150;
                 dataGridView1.Columns[1].Width = 150;
                 dataGridView1.Columns[2].Width = 150;
-                dataGridView1.Columns[3].Width = 150;
-                //totalCount += int.Parse(reader["amount"].ToString());
+                dataGridView1.Columns[3].Width = 150;                
             }
             else
             {
                 MessageBox.Show("無訂單");
             }
+            
             reader.Close();
             con.Close();
         }

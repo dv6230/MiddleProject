@@ -124,6 +124,12 @@
     <Compile Include="Panel\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\CustomerManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\CustomerManage.Designer.cs">
+      <DependentUpon>CustomerManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\EmployeeManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\CustomerManage.resx">
+      <DependentUpon>CustomerManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\EmployeeManage.resx">
       <DependentUpon>EmployeeManage.cs</DependentUpon>

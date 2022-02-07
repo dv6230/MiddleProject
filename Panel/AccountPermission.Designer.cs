@@ -37,10 +37,11 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.Font = new System.Drawing.Font("新細明體", 12F);
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(66, 171);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(385, 124);
+            this.checkedListBox1.Size = new System.Drawing.Size(385, 212);
             this.checkedListBox1.TabIndex = 2;
             // 
             // button2

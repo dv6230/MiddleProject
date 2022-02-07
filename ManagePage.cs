@@ -15,7 +15,22 @@ namespace MiddleProject
 
         private void ManagePage_Load(object sender, EventArgs e)
         {
-            var a = menuStrip1.Items;
+            if (!Model.GolbalVar.userPermissionList.Contains("訂單"))
+            {
+                訂單ToolStripMenuItem.Visible = false;
+            }
+            if (!Model.GolbalVar.userPermissionList.Contains("員工"))
+            {
+                員工ToolStripMenuItem.Visible = false;
+            }
+            if (!Model.GolbalVar.userPermissionList.Contains("會員"))
+            {
+                會員ToolStripMenuItem.Visible = false;
+            }
+            if (!Model.GolbalVar.userPermissionList.Contains("商品"))
+            {
+                商品ToolStripMenuItem.Visible = false;
+            }
         }
 
         private void ManagePage_SizeChanged(object sender, EventArgs e)
@@ -116,6 +131,24 @@ namespace MiddleProject
             contentPanel.Controls.Clear();
             var p = new Panel.AccountPermission();
             p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
+        }
+
+        private void 會員管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.CustomerManage();
+            p.Dock = DockStyle.Fill;
+            p.method = customerPage;
+            contentPanel.Controls.Add(p);
+        }
+
+        void customerPage()
+        {
+            contentPanel.Controls.Clear();
+            var p = new Panel.CustomerManage();
+            p.Dock = DockStyle.Fill;
+            p.method = customerPage;
             contentPanel.Controls.Add(p);
         }
     }

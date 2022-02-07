@@ -39,6 +39,7 @@ namespace MiddleProject
             this.員工管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.權限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.會員ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.會員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新增商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,9 +130,18 @@ namespace MiddleProject
             // 
             // 會員ToolStripMenuItem
             // 
+            this.會員ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.會員管理ToolStripMenuItem});
             this.會員ToolStripMenuItem.Name = "會員ToolStripMenuItem";
             this.會員ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.會員ToolStripMenuItem.Text = "會員";
+            // 
+            // 會員管理ToolStripMenuItem
+            // 
+            this.會員管理ToolStripMenuItem.Name = "會員管理ToolStripMenuItem";
+            this.會員管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.會員管理ToolStripMenuItem.Text = "會員管理";
+            this.會員管理ToolStripMenuItem.Click += new System.EventHandler(this.會員管理ToolStripMenuItem_Click);
             // 
             // 商品ToolStripMenuItem
             // 
@@ -238,5 +248,6 @@ namespace MiddleProject
         private System.Windows.Forms.ToolStripMenuItem 新增員工ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 員工管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 權限管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 會員管理ToolStripMenuItem;
     }
 }

@@ -36,6 +36,20 @@ namespace MiddleProject
             panel3.Size = new Size((int)((this.Width - panel1.Width - panel4.Width)), this.Height);
             tabControl1.Size = new Size(panel3.Width, tabControl1.Height);
 
+            authCheck();
+
+        }
+
+        void authCheck()
+        {
+            if (!Model.GolbalVar.userPermissionList.Contains("後台"))
+            {
+                SlideBackEndBtn.Visible = false;
+            }
+            if (!Model.GolbalVar.userPermissionList.Contains("新增會員"))
+            {
+                slideAddMemberBtn.Visible = false;
+            }
         }
 
         private void productDetail(object sender, EventArgs e)

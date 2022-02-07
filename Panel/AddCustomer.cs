@@ -37,8 +37,7 @@ namespace MiddleProject.Panel
                 email = tBoxEmail.Text,
                 birth = tpBirth.Value
             };
-
-            //插入返回自增列
+           
             var id = Model.GolbalVar.db.Insertable(customer).ExecuteReturnIdentity();
             cleanInput();
             MessageBox.Show($"新增成功 編號為:{id}");
