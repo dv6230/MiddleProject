@@ -81,9 +81,8 @@ namespace MiddleProject
             this.panel1.Controls.Add(this.slideOrderBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 670);
+            this.panel1.Size = new System.Drawing.Size(180, 558);
             this.panel1.TabIndex = 0;
             // 
             // btnCheck
@@ -91,10 +90,10 @@ namespace MiddleProject
             this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCheck.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCheck.Location = new System.Drawing.Point(1, 109);
+            this.btnCheck.Location = new System.Drawing.Point(1, 91);
             this.btnCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(202, 60);
+            this.btnCheck.Size = new System.Drawing.Size(180, 50);
             this.btnCheck.TabIndex = 4;
             this.btnCheck.Text = "結帳";
             this.btnCheck.UseVisualStyleBackColor = false;
@@ -104,10 +103,10 @@ namespace MiddleProject
             // 
             this.btnCloseSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCloseSystem.Font = new System.Drawing.Font("微軟正黑體", 10.2F);
-            this.btnCloseSystem.Location = new System.Drawing.Point(0, 577);
+            this.btnCloseSystem.Location = new System.Drawing.Point(0, 481);
             this.btnCloseSystem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseSystem.Name = "btnCloseSystem";
-            this.btnCloseSystem.Size = new System.Drawing.Size(202, 46);
+            this.btnCloseSystem.Size = new System.Drawing.Size(180, 38);
             this.btnCloseSystem.TabIndex = 3;
             this.btnCloseSystem.Text = "關閉";
             this.btnCloseSystem.UseVisualStyleBackColor = false;
@@ -118,10 +117,10 @@ namespace MiddleProject
             this.SlideBackEndBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SlideBackEndBtn.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SlideBackEndBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SlideBackEndBtn.Location = new System.Drawing.Point(0, 496);
+            this.SlideBackEndBtn.Location = new System.Drawing.Point(0, 413);
             this.SlideBackEndBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SlideBackEndBtn.Name = "SlideBackEndBtn";
-            this.SlideBackEndBtn.Size = new System.Drawing.Size(202, 60);
+            this.SlideBackEndBtn.Size = new System.Drawing.Size(180, 50);
             this.SlideBackEndBtn.TabIndex = 2;
             this.SlideBackEndBtn.Text = "後台管理";
             this.SlideBackEndBtn.UseVisualStyleBackColor = false;
@@ -132,10 +131,10 @@ namespace MiddleProject
             this.slideAddMemberBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.slideAddMemberBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slideAddMemberBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.slideAddMemberBtn.Location = new System.Drawing.Point(1, 193);
+            this.slideAddMemberBtn.Location = new System.Drawing.Point(1, 161);
             this.slideAddMemberBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.slideAddMemberBtn.Name = "slideAddMemberBtn";
-            this.slideAddMemberBtn.Size = new System.Drawing.Size(202, 60);
+            this.slideAddMemberBtn.Size = new System.Drawing.Size(180, 50);
             this.slideAddMemberBtn.TabIndex = 1;
             this.slideAddMemberBtn.Text = "新增會員";
             this.slideAddMemberBtn.UseVisualStyleBackColor = false;
@@ -146,10 +145,10 @@ namespace MiddleProject
             this.slideOrderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.slideOrderBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.slideOrderBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.slideOrderBtn.Location = new System.Drawing.Point(0, 28);
+            this.slideOrderBtn.Location = new System.Drawing.Point(0, 23);
             this.slideOrderBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.slideOrderBtn.Name = "slideOrderBtn";
-            this.slideOrderBtn.Size = new System.Drawing.Size(202, 60);
+            this.slideOrderBtn.Size = new System.Drawing.Size(180, 50);
             this.slideOrderBtn.TabIndex = 0;
             this.slideOrderBtn.Text = "點餐";
             this.slideOrderBtn.UseVisualStyleBackColor = false;
@@ -160,10 +159,9 @@ namespace MiddleProject
             this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(797, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(709, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(463, 670);
+            this.panel4.Size = new System.Drawing.Size(412, 558);
             this.panel4.TabIndex = 2;
             // 
             // panel3
@@ -183,19 +181,18 @@ namespace MiddleProject
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.tabControl1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(202, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(180, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(595, 670);
+            this.panel3.Size = new System.Drawing.Size(529, 558);
             this.panel3.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label3.Location = new System.Drawing.Point(294, 406);
+            this.label3.Location = new System.Drawing.Point(261, 338);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 37);
+            this.label3.Size = new System.Drawing.Size(55, 31);
             this.label3.TabIndex = 15;
             this.label3.Text = "單價";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,15 +200,14 @@ namespace MiddleProject
             // CountSelect
             // 
             this.CountSelect.Font = new System.Drawing.Font("新細明體", 12F);
-            this.CountSelect.Location = new System.Drawing.Point(415, 592);
-            this.CountSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CountSelect.Location = new System.Drawing.Point(369, 493);
             this.CountSelect.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.CountSelect.Name = "CountSelect";
-            this.CountSelect.Size = new System.Drawing.Size(62, 36);
+            this.CountSelect.Size = new System.Drawing.Size(55, 31);
             this.CountSelect.TabIndex = 14;
             this.CountSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.CountSelect.Value = new decimal(new int[] {
@@ -223,19 +219,18 @@ namespace MiddleProject
             // ingredientPanel
             // 
             this.ingredientPanel.AutoScroll = true;
-            this.ingredientPanel.Location = new System.Drawing.Point(42, 577);
-            this.ingredientPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ingredientPanel.Location = new System.Drawing.Point(37, 481);
             this.ingredientPanel.Name = "ingredientPanel";
-            this.ingredientPanel.Size = new System.Drawing.Size(298, 78);
+            this.ingredientPanel.Size = new System.Drawing.Size(265, 65);
             this.ingredientPanel.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label5.Location = new System.Drawing.Point(44, 406);
+            this.label5.Location = new System.Drawing.Point(39, 338);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 37);
+            this.label5.Size = new System.Drawing.Size(55, 31);
             this.label5.TabIndex = 12;
             this.label5.Text = "名稱";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,9 +239,9 @@ namespace MiddleProject
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label4.Location = new System.Drawing.Point(346, 592);
+            this.label4.Location = new System.Drawing.Point(308, 493);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 37);
+            this.label4.Size = new System.Drawing.Size(55, 31);
             this.label4.TabIndex = 11;
             this.label4.Text = "數量";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,9 +250,9 @@ namespace MiddleProject
             // 
             this.itemPriceLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.itemPriceLabel.Font = new System.Drawing.Font("微軟正黑體", 14F);
-            this.itemPriceLabel.Location = new System.Drawing.Point(362, 406);
+            this.itemPriceLabel.Location = new System.Drawing.Point(322, 338);
             this.itemPriceLabel.Name = "itemPriceLabel";
-            this.itemPriceLabel.Size = new System.Drawing.Size(63, 37);
+            this.itemPriceLabel.Size = new System.Drawing.Size(56, 31);
             this.itemPriceLabel.TabIndex = 10;
             this.itemPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -265,9 +260,9 @@ namespace MiddleProject
             // 
             this.itemNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.itemNameLabel.Font = new System.Drawing.Font("微軟正黑體", 14F);
-            this.itemNameLabel.Location = new System.Drawing.Point(112, 406);
+            this.itemNameLabel.Location = new System.Drawing.Point(100, 338);
             this.itemNameLabel.Name = "itemNameLabel";
-            this.itemNameLabel.Size = new System.Drawing.Size(164, 37);
+            this.itemNameLabel.Size = new System.Drawing.Size(146, 31);
             this.itemNameLabel.TabIndex = 9;
             this.itemNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -275,10 +270,9 @@ namespace MiddleProject
             // 
             this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddItem.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Location = new System.Drawing.Point(500, 481);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddItem.Location = new System.Drawing.Point(444, 401);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(76, 120);
+            this.btnAddItem.Size = new System.Drawing.Size(68, 100);
             this.btnAddItem.TabIndex = 1;
             this.btnAddItem.Text = "加入";
             this.btnAddItem.UseVisualStyleBackColor = false;
@@ -292,20 +286,18 @@ namespace MiddleProject
             this.panel2.Controls.Add(this.radioSweet3);
             this.panel2.Controls.Add(this.radioSweet2);
             this.panel2.Controls.Add(this.radioSweet1);
-            this.panel2.Location = new System.Drawing.Point(97, 456);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(86, 380);
             this.panel2.Name = "panel2";
             this.panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel2.Size = new System.Drawing.Size(380, 43);
+            this.panel2.Size = new System.Drawing.Size(338, 36);
             this.panel2.TabIndex = 8;
             // 
             // radioSweet5
             // 
             this.radioSweet5.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioSweet5.Location = new System.Drawing.Point(297, 2);
-            this.radioSweet5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioSweet5.Location = new System.Drawing.Point(264, 2);
             this.radioSweet5.Name = "radioSweet5";
-            this.radioSweet5.Size = new System.Drawing.Size(66, 38);
+            this.radioSweet5.Size = new System.Drawing.Size(59, 32);
             this.radioSweet5.TabIndex = 4;
             this.radioSweet5.TabStop = true;
             this.radioSweet5.Text = "無糖";
@@ -314,10 +306,9 @@ namespace MiddleProject
             // radioSweet4
             // 
             this.radioSweet4.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioSweet4.Location = new System.Drawing.Point(224, 1);
-            this.radioSweet4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioSweet4.Location = new System.Drawing.Point(199, 1);
             this.radioSweet4.Name = "radioSweet4";
-            this.radioSweet4.Size = new System.Drawing.Size(66, 38);
+            this.radioSweet4.Size = new System.Drawing.Size(59, 32);
             this.radioSweet4.TabIndex = 3;
             this.radioSweet4.TabStop = true;
             this.radioSweet4.Text = "3分";
@@ -326,10 +317,9 @@ namespace MiddleProject
             // radioSweet3
             // 
             this.radioSweet3.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioSweet3.Location = new System.Drawing.Point(151, 2);
-            this.radioSweet3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioSweet3.Location = new System.Drawing.Point(134, 2);
             this.radioSweet3.Name = "radioSweet3";
-            this.radioSweet3.Size = new System.Drawing.Size(66, 37);
+            this.radioSweet3.Size = new System.Drawing.Size(59, 31);
             this.radioSweet3.TabIndex = 2;
             this.radioSweet3.TabStop = true;
             this.radioSweet3.Text = "5分";
@@ -338,10 +328,9 @@ namespace MiddleProject
             // radioSweet2
             // 
             this.radioSweet2.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioSweet2.Location = new System.Drawing.Point(78, 2);
-            this.radioSweet2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioSweet2.Location = new System.Drawing.Point(69, 2);
             this.radioSweet2.Name = "radioSweet2";
-            this.radioSweet2.Size = new System.Drawing.Size(66, 37);
+            this.radioSweet2.Size = new System.Drawing.Size(59, 31);
             this.radioSweet2.TabIndex = 1;
             this.radioSweet2.TabStop = true;
             this.radioSweet2.Text = "7分";
@@ -350,10 +339,9 @@ namespace MiddleProject
             // radioSweet1
             // 
             this.radioSweet1.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioSweet1.Location = new System.Drawing.Point(4, 5);
-            this.radioSweet1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioSweet1.Location = new System.Drawing.Point(4, 4);
             this.radioSweet1.Name = "radioSweet1";
-            this.radioSweet1.Size = new System.Drawing.Size(66, 36);
+            this.radioSweet1.Size = new System.Drawing.Size(59, 30);
             this.radioSweet1.TabIndex = 0;
             this.radioSweet1.TabStop = true;
             this.radioSweet1.Text = "正常";
@@ -367,20 +355,18 @@ namespace MiddleProject
             this.sweetPanel.Controls.Add(this.radioTemp3);
             this.sweetPanel.Controls.Add(this.radioTemp2);
             this.sweetPanel.Controls.Add(this.radioTemp1);
-            this.sweetPanel.Location = new System.Drawing.Point(97, 520);
-            this.sweetPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sweetPanel.Location = new System.Drawing.Point(86, 433);
             this.sweetPanel.Name = "sweetPanel";
             this.sweetPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sweetPanel.Size = new System.Drawing.Size(380, 43);
+            this.sweetPanel.Size = new System.Drawing.Size(338, 36);
             this.sweetPanel.TabIndex = 7;
             // 
             // radioTemp5
             // 
             this.radioTemp5.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioTemp5.Location = new System.Drawing.Point(297, 2);
-            this.radioTemp5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioTemp5.Location = new System.Drawing.Point(264, 2);
             this.radioTemp5.Name = "radioTemp5";
-            this.radioTemp5.Size = new System.Drawing.Size(66, 38);
+            this.radioTemp5.Size = new System.Drawing.Size(59, 32);
             this.radioTemp5.TabIndex = 4;
             this.radioTemp5.TabStop = true;
             this.radioTemp5.Text = "常溫";
@@ -389,10 +375,9 @@ namespace MiddleProject
             // radioTemp4
             // 
             this.radioTemp4.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioTemp4.Location = new System.Drawing.Point(224, 1);
-            this.radioTemp4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioTemp4.Location = new System.Drawing.Point(199, 1);
             this.radioTemp4.Name = "radioTemp4";
-            this.radioTemp4.Size = new System.Drawing.Size(66, 38);
+            this.radioTemp4.Size = new System.Drawing.Size(59, 32);
             this.radioTemp4.TabIndex = 3;
             this.radioTemp4.TabStop = true;
             this.radioTemp4.Text = "去冰";
@@ -401,10 +386,9 @@ namespace MiddleProject
             // radioTemp3
             // 
             this.radioTemp3.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioTemp3.Location = new System.Drawing.Point(151, 2);
-            this.radioTemp3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioTemp3.Location = new System.Drawing.Point(134, 2);
             this.radioTemp3.Name = "radioTemp3";
-            this.radioTemp3.Size = new System.Drawing.Size(66, 37);
+            this.radioTemp3.Size = new System.Drawing.Size(59, 31);
             this.radioTemp3.TabIndex = 2;
             this.radioTemp3.TabStop = true;
             this.radioTemp3.Text = "微冰";
@@ -413,10 +397,9 @@ namespace MiddleProject
             // radioTemp2
             // 
             this.radioTemp2.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioTemp2.Location = new System.Drawing.Point(78, 2);
-            this.radioTemp2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioTemp2.Location = new System.Drawing.Point(69, 2);
             this.radioTemp2.Name = "radioTemp2";
-            this.radioTemp2.Size = new System.Drawing.Size(66, 37);
+            this.radioTemp2.Size = new System.Drawing.Size(59, 31);
             this.radioTemp2.TabIndex = 1;
             this.radioTemp2.TabStop = true;
             this.radioTemp2.Text = "少冰";
@@ -425,10 +408,9 @@ namespace MiddleProject
             // radioTemp1
             // 
             this.radioTemp1.Font = new System.Drawing.Font("新細明體", 8F);
-            this.radioTemp1.Location = new System.Drawing.Point(4, 5);
-            this.radioTemp1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioTemp1.Location = new System.Drawing.Point(4, 4);
             this.radioTemp1.Name = "radioTemp1";
-            this.radioTemp1.Size = new System.Drawing.Size(66, 36);
+            this.radioTemp1.Size = new System.Drawing.Size(59, 30);
             this.radioTemp1.TabIndex = 0;
             this.radioTemp1.TabStop = true;
             this.radioTemp1.Text = "正常";
@@ -437,9 +419,9 @@ namespace MiddleProject
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label2.Location = new System.Drawing.Point(36, 521);
+            this.label2.Location = new System.Drawing.Point(32, 434);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 38);
+            this.label2.Size = new System.Drawing.Size(52, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "冰塊";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,9 +429,9 @@ namespace MiddleProject
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label1.Location = new System.Drawing.Point(36, 454);
+            this.label1.Location = new System.Drawing.Point(32, 378);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 43);
+            this.label1.Size = new System.Drawing.Size(52, 36);
             this.label1.TabIndex = 2;
             this.label1.Text = "甜度";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -459,20 +441,18 @@ namespace MiddleProject
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(595, 397);
+            this.tabControl1.Size = new System.Drawing.Size(529, 331);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(587, 365);
+            this.tabPage2.Size = new System.Drawing.Size(521, 302);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -481,21 +461,19 @@ namespace MiddleProject
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 2);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 361);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(515, 298);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // FrontSide
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1262, 670);
+            this.ClientSize = new System.Drawing.Size(1122, 558);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrontSide";
             this.Text = "點餐";
             this.Load += new System.EventHandler(this.FrontOperate_Load);

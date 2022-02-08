@@ -23,6 +23,7 @@ namespace MiddleProject
         private void CheckOutForm_Load(object sender, EventArgs e)
         {
             lblPrice.Text = price.ToString();
+            lblGetPoint.Text = (price / 10).ToString();
         }
 
         void searchCustomer()
